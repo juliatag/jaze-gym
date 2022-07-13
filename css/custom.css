@@ -3,3 +3,23 @@
 .navbar-item img {
     max-height: 3.5rem;
 }
+
+
+
+
+.reverse-row {
+    display: flex;
+    flex-direction: row-reverse;  
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+
+@media  (max-width: 768px) {
+    .reverse-cols-m {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    }
