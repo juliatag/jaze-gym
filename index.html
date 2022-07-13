@@ -1,53 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        img {
-        width:100%;
-        }
-    </style>
 
-    <title>test Skeleton</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bulma/css/bulma.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <title>test Skeleton</title>
 </head>
+
 <body>
-<!-- .container is main centered wrapper -->
-<div class="section hero">
-    <div class="container">
-      <div class="row">
-        <div class="one-half column">
-          <h4 class="hero-heading">Stop coding non-responsive sites. Let users view sites from anywhere.</h4>
-          <a class="button button-primary" href="http://getskeleton.com">Try Skeleton</a>
+  <!-- Header with Navigation -->
+  <div class="container mb-5">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="./">
+          <img src="images/jaze-logo.png" height="150" width="auto">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navigation">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navigation" class="navbar-menu">
+        <div class="navbar-end">
+
+
+          <a class="navbar-item">
+            Plans
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Gym
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                Equipement
+              </a>
+              <a class="navbar-item">
+                Amenities
+              </a>
+              <a class="navbar-item">
+                Classes
+              </a>
+
+              <a class="navbar-item">
+                Personal Trainers
+              </a>
+            </div>
+
+            <a class="navbar-item">
+              Child Care
+            </a>
+
+            <a class="navbar-item">
+              About
+            </a>
+          </div>
+
+
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Sign up</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a class="navbar-item">
+            FR
+          </a>
         </div>
-        <div class="one-half column phones">
-          <img class="phone" src="iphone.png">
-          <p>Aftab Was Here</p>
-          <p>Once again Aftab is here!</p>
-          I have a feeling my code will get fukkkkkkt
-          But let's see what happens
-          just adding random stuff
-          <p> Nat was here </p>
-          <p>Trying this stupid shit </p>
+    </nav>
+  </div>
+
+  <!-- Intro Section -->
+
+  <section id="home-intro">
+    <div class="columns is-mobile">
+      <div class="column  p-6" style="background-color: rgb(204, 204, 204)
+      ">
+        <div class="container">
+          <h1 class="title">
+            A comfortable place to get fit.
+          </h1>
+          <p class="mb-4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum autem dolor soluta magni expedita consequatur, cumque saepe nemo ut vitae cupiditate. Amet ab iste alias illo accusamus quasi magnam deserunt.
+          </p>
+          <button class="button is-primary">Primary</button>
         </div>
-        <p>this is Julieta</p>
-        <p>This is zac</p>
-        <p>This is zac again</p>
-        <p> zac again again again</p>
-        <p> Zac is a sexy monster</p>
-        <p>juju </p>
-        <p>sgdsfgsdfgsdfg</p>
-        <p>old</p>
-        <p>I HATE GITHUB</p>
-        <p>new</p>
-        <p>fuck you hoe</p>
+      </div>
+      <div class="column">
+      
+        <figure class="image " style="">
+          <img src="images/gym.jpg" >
+        </figure>
+        
       </div>
     </div>
-  </div>
-  
-  <!-- Note: columns can be nested, but it's not recommended since Skeleton's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) -->
-    
+  </section>
+
+
+
+
+
+  <script src="scripts/mobile-menu.js"></script>
 </body>
+
 </html>
