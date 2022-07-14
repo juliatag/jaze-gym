@@ -69,8 +69,10 @@
 }
 
 /* Equipment animation */
+.card {
+  transition: 0.5s;
+}
 .card:hover {
   transform: scale(1.05);
   border: 2px solid #00d1b2;
-  transition: 0.5s;
 }
