@@ -26,9 +26,9 @@
   .navbar-link:not(.is-arrowless)::after {
     display: none;
   }
-}
-.has-dropdown a {
-  background-color: white;
+  .navbar-link {
+    background-color: white !important;
+  }
 }
 
 
