@@ -1,3 +1,5 @@
+@import url('../dist/css/mycssfile.css');
+
 .navbar-item img {
   max-height: 3.5rem;
 }
@@ -96,7 +98,3 @@
   transition: 0.5s;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  border: 2px solid #00d1b2;
-}
