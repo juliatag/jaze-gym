@@ -22,6 +22,14 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .navbar-link:not(.is-arrowless)::after {
+    display: none;
+  }
+  .navbar-link {
+    background-color: white !important;
+  }
+}
 
 
 /* Flipping cards*/
@@ -72,6 +80,7 @@
 .card {
   transition: 0.5s;
 }
+
 .card:hover {
   transform: scale(1.05);
   border: 2px solid #00d1b2;

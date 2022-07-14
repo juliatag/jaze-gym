@@ -18,93 +18,60 @@
 
     <!-- Header with Navigation -->
     <div class="container mb-5">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar has-shadow is-white mb-5">
             <div class="navbar-brand">
                 <a class="navbar-item" href="./">
                     <img src="images/jaze-logo.png"
-                        alt="Company logo, a blue outline of a women with a dumb bell and the word jaze" height="150"
-                        width="auto">
+                        alt="Company logo, a blue outline of a women with a dumb bell and the word jaze"
+                        style="max-height:70px" class="px-2 py-2">
                 </a>
-
+      
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navigation">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-
-            <div id="navigation" class="navbar-menu">
+            <div class="navbar-menu" id="navigation">
                 <div class="navbar-end">
-
-
-                    <a class="navbar-item" href="plans.html">
-                        Plans
-                    </a>
-
+                    <a href="plans.html" class="navbar-item">Plans</a>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            Gym
-                        </a>
-
+                        <a class="navbar-link">Gym</a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="equipment.html">
-                                Equipement
-                            </a>
-                            <a class="navbar-item" href="amenities.html">
-                                Amenities
-                            </a>
-                            <a class="navbar-item" href="classes.html">
-                                Classes
-                            </a>
-
-                            <a class="navbar-item" href="trainers.html">
-                                Personal Trainers
-                            </a>
-                        </div>
-
-                        <a class="navbar-item" href="childcare.html">
-                            Child Care
-                        </a>
-
-                        <a class="navbar-item" href="about.html">
-                            About
-                        </a>
-                    </div>
-
-
-
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
-                                <a class="button is-rounded is-primary" href="signup.html">
-                                    <strong>Sign up</strong>
-                                </a>
-                            </div>
+                            <a href="equipment.html" class="navbar-item">Equipment</a>
+                            <a href="amenities.html" class="navbar-item">Amenities</a>
+                            <a href="classes.html" class="navbar-item">Classes</a>
+                            <a href="trainers.html" class="navbar-item">Personal Trainers</a>
                         </div>
                     </div>
-
-                    <a class="navbar-item">
-                        FR
+                    <a href="childcare.html" class="navbar-item has-background-primary has-text-weight-bold">Child Care</a>
+                    <a href="about.html" class="navbar-item">About</a>
+                    <a href="plans.html" class="navbar-item">
+                        <button class="button is-primary is-rounded has-text-weight-bold">Sign Up</button>
                     </a>
+                    <a href="fr/equipments.html" class="navbar-item">FR</a>
                 </div>
+            </div>
         </nav>
     </div>
 
     <!-- Intro Section -->
-    <div class="container is-max-desktop has-text-centered">
-        <h1 class="title mb-2 is-centered">Child Care Center </h1>
-        <p class="mb-6 is-size-6 ">
-            Our affordable mom-tailored plan gives you access the Child Care Center and Children Classes to help you
-            stay healthy even if you have a busy mom life.
-        </p>
+    <section id="chilcare-header" class="container my-5 px-4">
+        <div class="container is-max-desktop has-text-centered">
+            <h1 class="title mb-2 is-centered">Child Care Center </h1>
+            <p class="mb-6 is-size-6 ">
+                Our affordable mom-tailored plan gives you access the Child Care Center and Children Classes to help you
+                stay healthy even if you have a busy mom life.
+            </p>
 
-    </div>
+        </div>
+    </section>
 
 
 
     <!-- HOW Section -->
 
-    <section id="childcare-intro" class="container my-5 px-4">
+    <section id="childcare-how" class="container my-5 px-4">
         <div class="columns reverse-row reverse-cols-m">
             <div class="column  p-6">
                 <div class="container has-text-centered-mobile">
@@ -131,7 +98,7 @@
 
     <!-- WHY Section -->
 
-    <section id="home-intro" class="container my-5 px-4">
+    <section id="chilcare-why" class="container my-5 px-4">
         <div class="columns reverse-cols-m">
             <div class="column  p-6">
                 <div class="container has-text-centered-mobile">
@@ -158,7 +125,7 @@
 
     <!-- Work-Life  Section -->
 
-    <section id="classes-intro" class="container my-5 px-4">
+    <section id="chilcare-work-life" class="container my-5 px-4 mb-6">
         <div class="columns reverse-row reverse-cols-m">
             <div class="column  p-6">
                 <div class="container has-text-centered-mobile">
@@ -186,12 +153,17 @@
 
     <!-- SIgn Up Buttom-->
 
-    <div class="buttons are-large  is-centered mt-6 ">
-        <a class="button is-rounded is-primary" href="signup.html">
-            <strong>Sign up</strong>
-        </a>
-    </div>
+    <section id="childcare-sign-up" class="container my-5 px-4">
+        <div class="container is-max-desktop has-text-centered">
+            <h1 class="title mb-2 is-centered">Sound good?</h1>
 
+            <div class="buttons are-large  is-centered mt-4 ">
+                <a class="button is-rounded is-primary" href="plans.html">
+                    <strong>Sign up</strong>
+                </a>
+            </div>
+        </div>
+    </section>
 
 
 
