@@ -14,14 +14,17 @@
   object-fit: cover;
 }
 
-
+/* Mobile Styles*/
 @media (max-width: 768px) {
   .reverse-cols-m {
     display: flex;
     flex-direction: column-reverse;
   }
+
+
 }
 
+/* Mobile and Tablet Styles*/
 @media (max-width: 1023px) {
   .navbar-link:not(.is-arrowless)::after {
     display: none;
@@ -29,6 +32,18 @@
   .navbar-link {
     background-color: white !important;
   }
+}
+
+/* Tablet and up*/
+@media (min-width: 769px) {
+.px-6-tablet {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+.mx-6-tablet {
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
+}
 }
 
 
