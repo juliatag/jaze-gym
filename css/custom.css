@@ -57,3 +57,15 @@
       .card-flip:hover .card-back {
         transform: rotateY(0deg);
       }
+      
+      .round {
+        border-radius: 25px;
+      }
+
+      .round .message-header {
+        border-radius: 25px  25px 0 0;
+      }
+
+      .round .message-body {
+        border-radius: 0 0 25px  25px ;
+      }
