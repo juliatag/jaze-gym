@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+$primary: #66bcd1;
+$link: #b04cab;
+$family-primary: 'Comfortaa', cursive;
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: $link !important;
+  }
+
+// Import only what you need from Bulma
+@import "../bulma/bulma.sass";
