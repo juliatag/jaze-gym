@@ -203,11 +203,11 @@
             <label class="label mx-6">Basic Information</label>
             <div class="control mx-6 column">
               <label for="fn" class="is-hidden">First Name</label>
-              <input id="fn" class="input is-rounded" type="text" placeholder="First Name">
+              <input id="fn" class="input is-rounded" type="text" placeholder="First Name" required>
             </div>
             <div class="control mx-6 column">
               <label for="ln" class="is-hidden">Last Name</label>
-              <input class="input is-rounded" type="text" placeholder="Last Name">
+              <input class="input is-rounded" type="text" placeholder="Last Name" required>
             </div>
 
 
@@ -218,19 +218,19 @@
               </div>
               <div class="control ml-2">
                 <label for="email-confirm" class="is-hidden">Confirm E-mail</label>
-                <input id="email-confirm" class="input is-rounded" type="text" placeholder="confirm e-mail">
+                <input id="email-confirm" class="input is-rounded" type="text" placeholder="confirm e-mail" required>
               </div>
             </div>
 
             <div class="field mx-6 is-flex column columns">
               <div class="control mr-2 column p-0">
                 <label for="dob" class="">Date of Birth</label>
-                <input id="dob" class="input is-rounded is-fullwidth" type="date">
+                <input id="dob" class="input is-rounded is-fullwidth" type="date" max="2022-01-01" min="1900-01-01" required>
               </div>
               <div class="control ml-2 column p-0">
                 <label for="gender" class="is-invisible">Gender</label>
                 <div class="select is-fullwidth">
-                  <select id="gender" name="gender" class="input is-rounded">
+                  <select id="gender" name="gender" class="input is-rounded" required>
                     <option value="female" selected>Female</option>
                     <option value="male" disabled>Male</option>
                   </select>
@@ -257,12 +257,11 @@
               </div>
               <div class="control column p-0 is-4">
                 <label for="postalcode" class="is-hidden">Postal Code</label>
-                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required
-                  maxlength="7">
+                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required maxlength="7">
               </div>
               <div class="control column p-0 is-2">
                 <label for="province" class="is-hidden">Province</label>
-                <input id="province" class="input is-rounded" type="text" placeholder="Province" maxlength="2">
+                <input id="province" class="input is-rounded" type="text" placeholder="Province" required maxlength="2">
               </div>
             </div>
 
