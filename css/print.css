@@ -1,0 +1,8 @@
+header,
+footer,
+img,
+div>img,
+div
+{
+    display: none !important;
+}
