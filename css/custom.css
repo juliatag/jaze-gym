@@ -110,4 +110,44 @@ footer {
   box-shadow: -4px 6px 7px rgba(0, 0, 0, 0.5);
 }
 
+@media print {
+  * {
+    background-color: white;
+  }
 
+  .column {
+    padding: 2px !important;
+    page-break-inside: avoid !important;
+  }
+
+  html, body {
+    height:100% !important; 
+    font-size: 9.5pt !important;
+  }
+
+  .button, footer, .control, .image, .hide-print{
+    display: none;
+  }
+
+  .flip-card-back {
+    transform: none;
+  }
+}
+
+
+/*
+@media print {
+  * { margin: 0 !important; padding: 0 !important; }
+  
+  html, body {
+    background: #FFF !important; 
+    font-size: 9.5pt !important;
+  }
+
+  .template { width: auto !important; left:0 !important; top:0 !important; }
+  img { width:100% !important; }
+  li { margin: 0 0 10px 20px !important; }
+  .button { display:none !important; }
+  .is-hidden { display: 0 !important; }
+}
+*/
