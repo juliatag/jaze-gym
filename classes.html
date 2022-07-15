@@ -12,7 +12,7 @@
 
     <title>Jaze Gym - Classes</title>
     <meta name="description"
-    content="whether its yoga, zumba, or a powertraining course let our experienced trainers guide you!" />
+        content="whether its yoga, zumba, or a powertraining course let our experienced trainers guide you!" />
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <meta name="keywords" content=" gym, fitness, childcare, pool, sauna, steam sauna, women, equipment, workout, working
     out, yoga, zumba, playroom, health, trainer, personal trainer, leg press, leg extension, leg curls, calf raise, hip
@@ -31,7 +31,7 @@
                         alt="Company logo, a blue outline of a women with a dumb bell and the word jaze"
                         style="max-height:70px" class="px-2 py-2">
                 </a>
-    
+
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navigation">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -46,7 +46,8 @@
                         <div class="navbar-dropdown">
                             <a href="equipment.html" class="navbar-item">Equipment</a>
                             <a href="amenities.html" class="navbar-item">Amenities</a>
-                            <a href="classes.html" class="navbar-item has-background-primary has-text-weight-bold">Classes</a>
+                            <a href="classes.html"
+                                class="navbar-item has-background-primary has-text-weight-bold">Classes</a>
                             <a href="trainers.html" class="navbar-item">Personal Trainers</a>
                         </div>
                     </div>
@@ -61,40 +62,303 @@
         </nav>
     </div>
 
-    <!-- Classes intro -->
-    <section id="classes" class="container my-5 px-4">
-        <div class="has-text-centered mb-2 mx-2 p-6 ">
-            <h2 class="title is-size-2 mb-4">Get your groove on with the girls!</h2>
-            <p>All plans include free acess to our customized small group classes. From high intensity fitness classes
-                to zen, relaxing or mom-tailored activities, we offer you a variety of ways to stay healthy and active
-                while connecting together and spending time quality time with your kids. </p>
+    <!-- Intro Section -->
+    <section id="amenities-header" class="container my-5 p-5">
+        <div class="container is-max-desktop has-text-centered">
+            <h2 class="title mb-2 is-centered">Crossfit</h2>
+            <p class="mb-6 is-size-6 px-6-tablet mx-6-tablet">
+                A full-body workout employing various engaging techniques while remaining accessible to everyone. From
+                cardio to weight-training, dance and kickboxing, you get in shape and have fun at the same time. We
+                promise it will not feel like working out!
+            </p>
         </div>
     </section>
 
     <section class="container my-5 px-4">
-        <div class="columns">
-            <div class="column">
-                <div class="card-image">
-                    <img src="images/equipment/leg-extension.png" alt="">
-                </div>
-            </div>
-            <div class="column">
-                Third column
-            </div>
-            <div class="column">
-                Fourth column
-            </div>
+        <!--Tabs-->
+        <div class="filters tabs is-centered is-toggle">
+            <ul>
+                <li data-target="all" class="is-active has-text-weight-semibold">
+                    <a>
+                        <h3>All</h3>
+                    </a>
+                </li>
+                <li data-target="cardio">
+                    <a>
+                        <i class="fa-solid fa-heart-pulse pr-1"></i>
+                        <h3>Cardio</h3>
+                    </a>
+                </li>
+                <li data-target="zen">
+                    <a>
+                        <i class="fa-solid fa-spa pr-1"></i>
+                        <h3>Zen</h3>
+                    </a>
+                </li>
+                <li data-target="baby">
+                    <a>
+                        <i class="fa-solid fa-baby-carriage pr-1"></i>
+                        <h3>Baby</h3>
+                    </a>
+                </li>
+                <li data-target="child">
+                    <a>
+                        <i class="fa-solid fa-child pr-1"></i>
+                        <h3>Children</h3>
+                    </a>
+                </li>
+            </ul>
         </div>
+
+        <div class="container has-text-centered">
+            <!--Items-->
+            <div id="items" id="one" class="columns is-multiline is-mobile">
+                <!--Column-->
+                <div class="column is-6-mobile is-4-tablet is-3-desktop all zen">
+                    <!-- Card-->
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front is-flex is-flex-direction-column">
+                                <figure class="is-flex-grow-1 image is-5by3">
+                                    <img src="images/classes/zen-yoga.jpg" alt="yoga studio" class="img-cover ">
+                                </figure>
+                                <h2 class="title is-size-5 p-3 has-text-primary-light has-background-primary">Zen Yoga
+                                </h2>
+                            </div>
+                            <div
+                                class="flip-card-back p-5 has-background-primary is-flex is-flex-direction-column is-justify-content-center">
+                                <h2 class="title is-size-6 p-3 m-0 has-text-primary-light has-background-primary">Zen
+                                    Yoga
+                                </h2>
+                                <p class="has-text-primary-light is-size-7">Take time to stop, breathe, and refocus.
+                                    Inspired by
+                                    various yoga techniques, this workout allows you to move freely while giving
+                                    yourself a moment to stop and relax. Be Zen!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Card-->
+                </div>
+                <!--Column-->
+                <div class="column is-6-mobile is-4-tablet is-3-desktop all cardio">
+                    <!-- Card-->
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front is-flex is-flex-direction-column">
+                                <figure class="is-flex-grow-1 image is-5by3">
+                                    <img src="images/classes/zumba.webp" alt="zumba dancing" class="img-cover ">
+                                </figure>
+                                <h2 class="title is-size-5 p-3 has-text-primary-light has-background-primary">Zumba</h2>
+                            </div>
+                            <div
+                                class="flip-card-back p-5 has-background-primary is-flex is-flex-direction-column is-justify-content-center">
+                                <h2 class="title is-size-6 p-3 m-0 has-text-primary-light has-background-primary">Zumba
+                                </h2>
+                                <p class="has-text-primary-light is-size-7">Zumba is a workout that combines several
+                                    styles of Latin rhythms. This workout is moment of PURE FUN that makes you forget
+                                    that you are training. It’s accessible to all because it can be adapted to any level
+                                    of fitness. Come party with us!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Card-->
+                </div>
+                <!--Column-->
+                <div class="column is-6-mobile is-4-tablet is-3-desktop  all cardio">
+                    <!-- Card-->
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front is-flex is-flex-direction-column">
+                                <figure class="is-flex-grow-1 image is-5by3">
+                                    <img src="images/classes/aerobics.webp" alt="Aerobics" class="img-cover ">
+                                </figure>
+                                <h2 class="title is-size-5 p-3 has-text-primary-light has-background-primary">Aerobics</h2>
+                            </div>
+                            <div
+                                class="flip-card-back p-5 has-background-primary is-flex is-flex-direction-column is-justify-content-center">
+                                <h2 class="title is-size-6 p-3 m-0 has-text-primary-light has-background-primary">
+                                    Aerobics</h2>
+                                <p class="has-text-primary-light is-size-7">A full-body workout employing various
+                                    engaging techniques while remaining accessible to everyone. From cardio to
+                                    weight-training, dance and kickboxing, you get in shape and have fun at the same
+                                    time. We promise it will not feel like working out!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Card-->
+                </div>
+
+                <!--Column-->
+                <div class="column is-6-mobile is-4-tablet is-3-desktop all zen cardio">
+                    <!-- Card-->
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front is-flex is-flex-direction-column">
+                                <figure class="is-flex-grow-1 image is-5by3">
+                                    <img src="images/classes/aerial-yoga.jpg" alt="Aerial Yoga" class="img-cover ">
+                                </figure>
+                                <h2 class="title is-size-5 p-3 has-text-primary-light has-background-primary">Aerial
+                                    Yoga</h2>
+                            </div>
+                            <div
+                                class="flip-card-back p-5 has-background-primary is-flex is-flex-direction-column is-justify-content-center">
+                                <h2 class="title is-size-6 p-3 m-0 has-text-primary-light has-background-primary">Aerial
+                                    Yoga
+                                </h2>
+                                <p class="has-text-primary-light is-size-7">Suspended silks are used while executing
+                                    circus-inspired tricks and exercises using your body weight to develop balance,
+                                    coordination and strength, especially core and upper body muscle strength.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Column-->
+                <div class="column is-6-mobile is-4-tablet is-3-desktop all zen baby">
+                    <!-- Card-->
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front is-flex is-flex-direction-column">
+                                <figure class="is-flex-grow-1 image is-5by3">
+                                    <img src="images/classes/pregnancy-yoga.jpg" alt="Pregnancy Yoga" class="img-cover ">
+                                </figure>
+                                <h2 class="title is-size-5 p-3 has-text-primary-light has-background-primary">
+                                    Pregnancy Yoga</h2>
+                            </div>
+                            <div
+                                class="flip-card-back p-5 has-background-primary is-flex is-flex-direction-column is-justify-content-center">
+                                <h2 class="title is-size-6 p-3 m-0 has-text-primary-light has-background-primary">
+                                    Pregnancy Yoga
+                                </h2>
+                                <p class="has-text-primary-light is-size-7">An ideal exercise for all stages of
+                                    pregnancy. An emphasis on increasing body and breath awareness, learning pain
+                                    management and relaxation techniques to promote the well-being of yourself and
+                                    your baby.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Column-->
+                <div class="column is-6-mobile is-4-tablet is-3-desktop all zen baby">
+                    <!-- Card-->
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front is-flex is-flex-direction-column">
+                                <figure class="is-flex-grow-1 image is-5by3">
+                                    <img src="images/classes/baby-yoga.jpg" alt="Baby Yoga" class="img-cover ">
+                                </figure>
+                                <h2 class="title is-size-5 p-3 has-text-primary-light has-background-primary">
+                                    Baby Yoga</h2>
+                            </div>
+                            <div
+                                class="flip-card-back p-5 has-background-primary is-flex is-flex-direction-column is-justify-content-center">
+                                <h2 class="title is-size-6 p-3 m-0 has-text-primary-light has-background-primary">
+                                    Baby Yoga
+                                </h2>
+                                <p class="has-text-primary-light is-size-7">Focuses on transitioning to a
+                                    balanced life with baby and family while your mind and body are affected by
+                                    hormonal changes, lack of sleep, and physical strain. A gentle way to help
+                                    your body recover from childbirth while bonding and having fun with your
+                                    baby.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Column-->
+                <div class="column is-6-mobile is-4-tablet is-3-desktop all cardio child">
+                    <!-- Card-->
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front is-flex is-flex-direction-column">
+                                <figure class="is-flex-grow-1 image is-5by3">
+                                    <img src="images/classes/kids-14.jpg" alt="kids in the gym" class="img-cover ">
+                                </figure>
+                                <h2 class="title is-size-5 p-3 has-text-primary-light has-background-primary">
+                                    Show Time!</h2>
+                            </div>
+                            <div
+                                class="flip-card-back p-5 has-background-primary is-flex is-flex-direction-column is-justify-content-center">
+                                <h2 class="title is-size-6 p-3 m-0 has-text-primary-light has-background-primary">
+                                    Show Time!</h2>
+                                <p class="has-text-primary-light is-size-7"> Dancing in all its forms and
+                                    styles for your children (6-14)! While you work out they are having fun
+                                    dancing, learning , developing their coordination, balance reflexes and
+                                    creativity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <!--Column-->
+                  <div class="column is-6-mobile is-4-tablet is-3-desktop all cardio child">
+                    <!-- Card-->
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front is-flex is-flex-direction-column">
+                                <figure class="is-flex-grow-1 image is-5by3">
+                                    <img src="images/classes/kids-9.jpg" alt="small child" class="img-cover ">
+                                </figure>
+                                <h2 class="title is-size-5 p-3 has-text-primary-light has-background-primary">
+                                   Move it!</h2>
+                            </div>
+                            <div
+                                class="flip-card-back p-5 has-background-primary is-flex is-flex-direction-column is-justify-content-center">
+                                <h2 class="title is-size-6 p-3 m-0 has-text-primary-light has-background-primary">
+                                    Move it!</h2>
+                                <p class="has-text-primary-light is-size-7"> Let’s play some fun team
+                                    based games! Simple and entertaining our activities will keep your
+                                    children (3-6 years) engaged while providing you with a full body
+                                    workout.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Column-->
+                <div class="column is-6-mobile is-4-tablet is-3-desktop all cardio child">
+                    <!-- Card-->
+                    <div class="flip-card card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front is-flex is-flex-direction-column">
+                                <figure class="is-flex-grow-1 image is-5by3">
+                                    <img src="images/classes/kids-3.jpg" alt="todler swinging" class="img-cover ">
+                                </figure>
+                                <h2 class="title is-size-5 p-3 has-text-primary-light has-background-primary">
+                                    Swing It!</h2>
+                            </div>
+                            <div
+                                class="flip-card-back p-5 has-background-primary is-flex is-flex-direction-column is-justify-content-center">
+                                <h2 class="title is-size-6 p-3 m-0 has-text-primary-light has-background-primary">
+                                    Swing It!</h2>
+                                <p class="has-text-primary-light is-size-7"> Move, dance, sing and play to
+                                    keep those young bodies healthy and strong! A fun and playful way for
+                                    you and your children (1-3 years) to spend some quality time together.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                </div>
+                <!--End Columns-->
+            </div><!--End Items-->
     </section>
 
-    <div class="column is-6-mobile is-4-tablet is-3-desktop is-flex">
-        <div class="card has-background-primary">
-            <div class="card-image has-text-centered">
-                <img src="images/equipment/leg-extension.png" alt="">
-            </div>
-            <div class="card-content has-text-white">
-                <p class="title is-size-5 has-text-white">Leg Extension</p>
-                <p>Muscle Targeted:<br>Quadriceps</p>
-            </div>
-        </div>
+          <!-- SIgn Up Buttom-->
+  <section id="classes-sign-up" class="container my-5 p-5">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title mb-2 is-centered">Ready to groove?</h2>
+      <p class="mb-6 is-size-6 px-6-tablet mx-6-tablet"><a href=""></a>
+        Sign up for any of our plans to get free access to all classes.  Consult the <a href="#">classes schedule</a> and reserve your spot at the gym or by phone. Our friendly staff will add you the the attendee list. Note that space is limited and reserving is the best way to guarantee a spot for you and your kids.
+      </p>
+      <div class="buttons is-centered mt-4 ">
+        <a class="button is-rounded is-primary" href="plans.html">
+          Sign up
+        </a>
+      </div>
     </div>
+  </section>
+
+
+    <script src="scripts/mobile-menu.js"></script>
+    <script src="scripts/classes-filters.js"></script>
+</body>
+
+</html>

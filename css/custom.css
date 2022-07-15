@@ -80,13 +80,6 @@ p, ul, ol {
   backface-visibility: hidden;
 }
 
-/*
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-*/
-
 .flip-card-back {
   transform: rotateY(180deg);
 }
