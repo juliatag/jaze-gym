@@ -1,0 +1,17 @@
+header,
+footer,
+img,
+figure
+
+
+{
+    display: none !important;
+}
+
+p,h1,h2{
+    display:contents;
+    font-size: 15px !important;
+}
+div{
+    break-inside: avoid;
+}
