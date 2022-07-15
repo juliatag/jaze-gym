@@ -133,21 +133,3 @@ footer {
     transform: none;
   }
 }
-
-
-/*
-@media print {
-  * { margin: 0 !important; padding: 0 !important; }
-  
-  html, body {
-    background: #FFF !important; 
-    font-size: 9.5pt !important;
-  }
-
-  .template { width: auto !important; left:0 !important; top:0 !important; }
-  img { width:100% !important; }
-  li { margin: 0 0 10px 20px !important; }
-  .button { display:none !important; }
-  .is-hidden { display: 0 !important; }
-}
-*/
