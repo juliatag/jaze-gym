@@ -1,10 +1,22 @@
 @import url('../dist/css/mycssfile.css');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
+body {
+  background-color: #edfdff;
+}
 p,
 ul,
 ol {
   font-family: 'Open Sans', sans-serif !important;
+}
+
+header {
+  background-color: #ffffff !important;
+}
+
+
+footer {
+  background-color: #0f4154 !important;
+  color: #ffffff;
 }
 
 .navbar-item img {
@@ -97,3 +109,5 @@ ol {
 .card:hover {
   box-shadow: -4px 6px 7px rgba(0, 0, 0, 0.5);
 }
+
+
