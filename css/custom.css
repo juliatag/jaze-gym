@@ -109,3 +109,27 @@ footer {
 .card:hover {
   box-shadow: -4px 6px 7px rgba(0, 0, 0, 0.5);
 }
+
+@media print {
+  * {
+    background-color: white;
+  }
+
+  .column {
+    padding: 2px !important;
+    page-break-inside: avoid !important;
+  }
+
+  html, body {
+    height:100% !important; 
+    font-size: 9.5pt !important;
+  }
+
+  .button, footer, .control, .image, .hide-print{
+    display: none;
+  }
+
+  .flip-card-back {
+    transform: none;
+  }
+}
