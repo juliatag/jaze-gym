@@ -57,29 +57,35 @@ buttonPlus.addEventListener('click', () => {
 
     // add row and tabledata
     let newRow = table.insertRow();
+
     //name 
-    let newCell1 = newRow.insertCell();
+    let nameCell = newRow.insertCell();
 
     var childName = document.createElement("input");
     childName.type = "text"
     childName.value = "";
     childName.placeholder = "insert child's name";
     childName.required = "required";
+    childName.classList.add('input', 'is-rounded');
 
     //age
-    let newCell2 = newRow.insertCell();
+    let ageCell = newRow.insertCell();
 
     var childAge = document.createElement("input");
     childAge.type = "number"
     childAge.value = "Insert child's age";
+    childAge.size = "5";
     childAge.required = "required";
     childAge.placeholder = 'age';
     childAge.min = '0';
     childAge.max = '10';
+    childAge.classList.add('input', 'is-rounded');
 
 
-    newCell1.appendChild(childName);
-    newCell2.appendChild(childAge);
+    nameCell.style.padding = "3px";
+    ageCell.style.padding = "3px";
+    nameCell.appendChild(childName);
+    ageCell.appendChild(childAge);
 }); // end function
 
 // Event Listener for 'removeChild' button
