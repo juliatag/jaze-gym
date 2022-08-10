@@ -190,6 +190,7 @@
       <div class="container">
 
         <form>
+          <!-- Plan Select -->
           <div class="field container my-5 mx-3 control select is-fullwidth">
             <label for="selectplan" class="is-hidden">Select your Plan</label>
             <select id="selectplan" class="has-background-primary has-text-white">
@@ -225,7 +226,8 @@
             <div class="field mx-6 is-flex column columns">
               <div class="control mr-2 column p-0">
                 <label for="dob" class="">Date of Birth</label>
-                <input id="dob" class="input is-rounded is-fullwidth" type="date" max="2022-01-01" min="1900-01-01" required>
+                <input id="dob" class="input is-rounded is-fullwidth" type="date" max="2022-01-01" min="1900-01-01"
+                  required>
               </div>
               <div class="control ml-2 column p-0">
                 <label for="gender" class="is-invisible">Gender</label>
@@ -238,7 +240,13 @@
               </div>
             </div>
 
+            <!-- Children Info -->
+            <div>
+              <label class="label mx-6">Children Info</label>
+            </div>
 
+            <!-- Address Info -->
+            <label class="label mx-6">Address</label>
             <div class="field mt-1 mx-6 is-flex columns column">
               <div class="control mr-2 column p-0">
                 <label for="address" class="is-hidden">Address</label>
@@ -257,7 +265,8 @@
               </div>
               <div class="control column p-0 is-4">
                 <label for="postalcode" class="is-hidden">Postal Code</label>
-                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required maxlength="7">
+                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required
+                  maxlength="7">
               </div>
               <div class="control column p-0 pl-3 is-3">
                 <label for="province" class="is-hidden">Province</label>
@@ -275,6 +284,7 @@
                 <input type="reset" id="clear_form" value="Clear Your Form" class="button is-warning" />
               </div>
             </div>
+          </div>
         </form>
       </div>
     </div>
