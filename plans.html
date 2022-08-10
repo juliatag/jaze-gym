@@ -22,43 +22,11 @@
 </head>
 
 <body>
-  <!-- Header with Navigation -->
-  <header id="header">
-    <nav class="navbar container has-shadow is-white mb-5">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="./">
-          <img src="images/jaze-logo.png"
-            alt="Company logo, a blue outline of a women with a dumb bell and the word jaze" style="max-height:70px"
-            class="px-2 py-2">
-        </a>
+  <!-- Navigation Start-->
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navigation">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="navbar-menu" id="navigation">
-        <div class="navbar-end">
-          <a href="plans.html" class="navbar-item has-background-primary has-text-weight-bold">Plans</a>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">Gym</a>
-            <div class="navbar-dropdown">
-              <a href="equipment.html" class="navbar-item">Equipment</a>
-              <a href="amenities.html" class="navbar-item">Amenities</a>
-              <a href="classes.html" class="navbar-item">Classes</a>
-              <a href="trainers.html" class="navbar-item">Personal Trainers</a>
-            </div>
-          </div>
-          <a href="childcare.html" class="navbar-item">Child Care</a>
-          <a href="about.html" class="navbar-item">About</a>
-          <a href="plans.html" class="navbar-item has-text-weight-bold">
-            <button class="button is-primary is-rounded has-text-weight-bold">Sign Up</button>
-          </a>
-          <a href="fr/index.html" class="navbar-item">FR</a>
-        </div>
-      </div>
-    </nav>
+  <header id="header" class="plans">
+    <!-- This script adds the site header to the page -->
+    <script src="scripts/addHeader.js" type="module"></script>
   </header>
 
   <!-- Intro Section -->
@@ -167,22 +135,12 @@
 
 
 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p class="is-size-7">
-        JAZE Gym &copy; 2022
-      </p>
-      <p class="is-size-7 ">
-        123 Monkland Ave, Montreal, QC H4A 3T7 Canada
-      </p>
-      <div class="is-size-4 has-text-primary">
-        <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-
-      </div>
-    </div>
+  <!--Footer-->
+  <footer class="footer" id="footer">
+    <!-- This script adds the site footer to the page -->
+    <script src="scripts/addFooter.js" type="module"></script>
   </footer>
+
 
   <div class="modal">
     <div class="modal-background"></div>
@@ -225,7 +183,8 @@
             <div class="field mx-6 is-flex column columns">
               <div class="control mr-2 column p-0">
                 <label for="dob" class="">Date of Birth</label>
-                <input id="dob" class="input is-rounded is-fullwidth" type="date" max="2022-01-01" min="1900-01-01" required>
+                <input id="dob" class="input is-rounded is-fullwidth" type="date" max="2022-01-01" min="1900-01-01"
+                  required>
               </div>
               <div class="control ml-2 column p-0">
                 <label for="gender" class="is-invisible">Gender</label>
@@ -257,7 +216,8 @@
               </div>
               <div class="control column p-0 is-4">
                 <label for="postalcode" class="is-hidden">Postal Code</label>
-                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required maxlength="7">
+                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required
+                  maxlength="7">
               </div>
               <div class="control column p-0 pl-3 is-3">
                 <label for="province" class="is-hidden">Province</label>

@@ -13,7 +13,7 @@
     <title>Amenities</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <meta name="description"
-    content="At Jaze gym for women we have some of the finest equipment, pool, sauna and playroom!" />
+        content="At Jaze gym for women we have some of the finest equipment, pool, sauna and playroom!" />
     <meta name="keywords" content=" gym, fitness, childcare, pool, sauna, steam sauna, women, equipment, workout, working
     out, yoga, zumba, playroom, health, trainer, personal trainer, leg press, leg extension, leg curls, calf raise, hip
     abductor, glute machine, chest press, butterfly, shoulder press, lateral raise, stair master, elliptical, treadmill,
@@ -23,45 +23,12 @@
 
 <body>
 
-       <!-- Header with Navigation -->
-       <header id="header">
-        <nav class="navbar container has-shadow is-white mb-5">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="./">
-              <img src="images/jaze-logo.png"
-                alt="Company logo, a blue outline of a women with a dumb bell and the word jaze" style="max-height:70px"
-                class="px-2 py-2">
-            </a>
-    
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navigation">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
-          <div class="navbar-menu" id="navigation">
-            <div class="navbar-end">
-              <a href="plans.html" class="navbar-item">Plans</a>
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link navbar-item has-background-primary">Gym</a>
-                <div class="navbar-dropdown">
-                  <a href="equipment.html" class="navbar-item">Equipment</a>
-                  <a href="amenities.html" class="navbar-item has-background-primary has-text-weight-bold">Amenities</a>
-                  <a href="classes.html" class="navbar-item">Classes</a>
-                  <a href="trainers.html" class="navbar-item">Personal Trainers</a>
-                </div>
-              </div>
-              <a href="childcare.html" class="navbar-item">Child Care</a>
-              <a href="about.html" class="navbar-item">About</a>
-              <a href="plans.html" class="navbar-item">
-                <button class="button is-primary is-rounded has-text-weight-bold">Sign Up</button>
-              </a>
-              <a href="fr/index.html" class="navbar-item">FR</a>
-            </div>
-          </div>
-        </nav>
-      </header>
-        <!-- Navigation End-->
+    <!-- Navigation Start-->
+
+    <header id="header" class="gym amenities">
+        <!-- This script adds the site header to the page -->
+        <script src="scripts/addHeader.js" type="module"></script>
+    </header>
 
     <!-- Intro Section -->
     <section id="amenities-header" class="container my-5 p-5">
@@ -74,7 +41,7 @@
         </div>
     </section>
 
-   
+
 
 
 
@@ -189,46 +156,26 @@
     </section>
 
 
-        <!-- SIgn Up Buttom-->
-        <section id="amenities-sign-up" class="container my-5 p-5 hide-print">
-            <div class="container is-max-desktop has-text-centered">
-                <h2 class="title mb-2 is-centered">What are you waiting for?</h2>
-                <p class="mb-6 is-size-6 px-6-tablet mx-6-tablet">
-                    With all our plans you can enjoy the pool and the sauna or any other amenity that we have to offer.
-                </p>
-                <div class="buttons is-centered mt-4 ">
-                    <a class="button is-rounded is-primary" href="plans.html">
-                        Sign up
-                    </a>
-                </div>
-            </div>
-        </section>
-
-
-
-
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p class="is-size-7">
-                JAZE Gym &copy; 2022
+    <!-- SIgn Up Buttom-->
+    <section id="amenities-sign-up" class="container my-5 p-5 hide-print">
+        <div class="container is-max-desktop has-text-centered">
+            <h2 class="title mb-2 is-centered">What are you waiting for?</h2>
+            <p class="mb-6 is-size-6 px-6-tablet mx-6-tablet">
+                With all our plans you can enjoy the pool and the sauna or any other amenity that we have to offer.
             </p>
-            <p class="is-size-7 ">
-                123 Monkland Ave, Montreal, QC H4A 3T7 Canada
-            </p>
-            <div class="is-size-4 has-text-primary">
-                <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-
+            <div class="buttons is-centered mt-4 ">
+                <a class="button is-rounded is-primary" href="plans.html">
+                    Sign up
+                </a>
             </div>
         </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer" id="footer">
+        <!-- This script adds the site footer to the page -->
+        <script src="scripts/addFooter.js" type="module"></script>
     </footer>
-
-
-
-
-
-    <script src="scripts/mobile-menu.js"></script>
 </body>
 
 </html>
