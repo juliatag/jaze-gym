@@ -19,9 +19,10 @@
     abductor, glute machine, chest press, butterfly, shoulder press, lateral raise, stair master, elliptical, treadmill,
     zen yoga, crossfit, aerial yoga, body strong, sculp pro, dance, move it, show time, underground parking, 24/7 gym,
     open late" />
+    <script defer src="scripts/plans_validation.js"></script> 
 </head>
 
-<body>
+<body >
   <!-- Header with Navigation -->
   <header id="header">
     <nav class="navbar container has-shadow is-white mb-5">
@@ -192,7 +193,7 @@
         <form>
           <div class="field container my-5 mx-3 control select is-fullwidth">
             <label for="selectplan" class="is-hidden">Select your Plan</label>
-            <select id="selectplan" class="has-background-primary has-text-white">
+            <select id="selectplan" class="has-background-primary has-text-white" >
               <option value="" selected disabled>Select your plan</option>
               <option value="standard">Standard</option>
               <option value="moms">Moms</option>
@@ -207,14 +208,14 @@
             </div>
             <div class="control mx-6 column">
               <label for="ln" class="is-hidden">Last Name</label>
-              <input class="input is-rounded" type="text" placeholder="Last Name" required>
+              <input class="input is-rounded" id = "ln" type="text" placeholder="Last Name" required>
             </div>
 
 
             <div class="field mt-1 mx-6 is-flex column">
               <div class="control mr-2">
                 <label for="email" class="is-hidden">E-mail</label>
-                <input id="email" class="input is-rounded" type="text" placeholder="e-mail" required>
+                <input id="email" class="input is-rounded" type="text" placeholder="e-mail"  required>
               </div>
               <div class="control ml-2">
                 <label for="email-confirm" class="is-hidden">Confirm E-mail</label>
