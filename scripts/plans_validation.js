@@ -10,6 +10,9 @@ elements.forEach(el => {
        
         let max = `${(new Date()).getFullYear() - 14}-01-01`;
         el.setAttribute('max', max);
+    }else if(el.id === 'clear_form'){
+        el.addEventListener('click',clearErrorStyles);
+
     }
 })
 
@@ -55,6 +58,11 @@ function confirmEmail(emailID, confirmationID) {
         confirmation.classList.remove('error');
     }
 }
+
+function clearErrorStyles(){
+    elements.forEach(el => el.classList.remove('error'));
+}
+
 
 // function validateForm() {
 //     return (validatePlan() &&
