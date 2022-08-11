@@ -4,17 +4,13 @@
     3. Adds mobile menu functionality
     5. Inserts the header in the page
 */
-
-addHeader();
-
-function addHeader() {
   fetch("components/header.html")
     .then((response) => response.text())
     .then((text) => (document.getElementById("header").innerHTML = text))
     .then(makeActive)
     .then(addMobileMenu)
     .then(window.scrollTo(0, 0));
-}
+
 
 function makeActive() {
   let header = document.getElementById("header");
@@ -22,12 +18,10 @@ function makeActive() {
 
   for (let page of pages) {
     let activeLink = document.getElementById(page);
-    if (activeLink != null) {
       activeLink.classList.add(
         "has-background-primary",
         "has-text-weight-bold"
       );
-    }
   }
 }
 
