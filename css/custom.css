@@ -132,4 +132,6 @@ footer {
   .flip-card-back {
     transform: none;
   }
+.error {
+  border: 2px solid red !important;
 }

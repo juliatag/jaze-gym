@@ -19,10 +19,12 @@
     abductor, glute machine, chest press, butterfly, shoulder press, lateral raise, stair master, elliptical, treadmill,
     zen yoga, crossfit, aerial yoga, body strong, sculp pro, dance, move it, show time, underground parking, 24/7 gym,
     open late" />
+    <script defer src="scripts/plans_validation.js"></script> 
 </head>
 
-<body>
-  <!-- Navigation Start-->
+<body >
+  <!-- Header with Navigation -->
+
 
   <header id="header" class="plans">
     <!-- This script adds the site header to the page -->
@@ -147,10 +149,10 @@
     <div class="modal-content has-background-white py-5 px-6">
       <div class="container">
 
-        <form>
+        <form autocomplete="on" id="signup-form">
           <div class="field container my-5 mx-3 control select is-fullwidth">
             <label for="selectplan" class="is-hidden">Select your Plan</label>
-            <select id="selectplan" class="has-background-primary has-text-white">
+            <select id="selectplan" class="has-background-primary has-text-white" required>
               <option value="" selected disabled>Select your plan</option>
               <option value="standard">Standard</option>
               <option value="moms">Moms</option>
@@ -165,26 +167,25 @@
             </div>
             <div class="control mx-6 column">
               <label for="ln" class="is-hidden">Last Name</label>
-              <input class="input is-rounded" type="text" placeholder="Last Name" required>
+              <input class="input is-rounded" id = "ln" type="text" placeholder="Last Name" required>
             </div>
 
 
             <div class="field mt-1 mx-6 is-flex column">
               <div class="control mr-2">
                 <label for="email" class="is-hidden">E-mail</label>
-                <input id="email" class="input is-rounded" type="text" placeholder="e-mail" required>
+                <input id="email" class="input is-rounded" type="email" placeholder="e-mail"  required pattern="[\w\.\-]+@[\w]+\.[\w]{2,4}" >
               </div>
               <div class="control ml-2">
                 <label for="email-confirm" class="is-hidden">Confirm E-mail</label>
-                <input id="email-confirm" class="input is-rounded" type="text" placeholder="confirm e-mail" required>
+                <input id="email-confirm" class="input is-rounded" type="email" placeholder="confirm e-mail"  required pattern="[\w\.\-]+@[\w]+\.[\w]{2,4}">
               </div>
             </div>
 
             <div class="field mx-6 is-flex column columns">
               <div class="control mr-2 column p-0">
                 <label for="dob" class="">Date of Birth</label>
-                <input id="dob" class="input is-rounded is-fullwidth" type="date" max="2022-01-01" min="1900-01-01"
-                  required>
+                <input id="dob" class="input is-rounded is-fullwidth" type="date" min="1900-01-01" required>
               </div>
               <div class="control ml-2 column p-0">
                 <label for="gender" class="is-invisible">Gender</label>
@@ -216,12 +217,11 @@
               </div>
               <div class="control column p-0 is-4">
                 <label for="postalcode" class="is-hidden">Postal Code</label>
-                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required
-                  maxlength="7">
+                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required maxlength="7"  pattern="^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY][0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ] {0,1}[0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ][0-9]$">
               </div>
               <div class="control column p-0 pl-3 is-3">
                 <label for="province" class="is-hidden">Province</label>
-                <input id="province" class="input is-rounded" type="text" placeholder="Province" required maxlength="2">
+                <input id="province" class="input is-rounded" type="text" placeholder="Province Code" required maxlength="2"  pattern="[A-Za-z][A-Za-z]">
               </div>
             </div>
 
