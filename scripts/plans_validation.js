@@ -46,7 +46,7 @@ function confirmEmail(e) {
     let confirmEmail = e.currentTarget;
     let email = document.getElementById('email');
     if (confirmEmail.value != email.value) {
-        alert('email & confirm must equal');
+        confirmEmail.setCustomValidity('Email must match');
     }
 }
 
