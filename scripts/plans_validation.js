@@ -1,16 +1,15 @@
+'use strict';
 let elements = ['fn', 'ln', 'email', 'email-confirm', 'dob'];
 
 elements.forEach(id => {
-    document.getElementById(id).addEventListener('invalid', invalid);
+    document.getElementById(id).addEventListener('invalid', onInvalid);
     document.getElementById(id).addEventListener('input', onInput);
-    if (id === 'email-confirm')
+    if (id === 'email-confirm') {
         document.getElementById(id).addEventListener('change', confirmEmail);
-    else if (id === 'dob') {
+    } else if (id === 'dob') {
         let dob = document.getElementById(id);
         let max = `${(new Date()).getFullYear() - 14}-01-01`;
         dob.setAttribute('max', max);
-
-        dob.addEventListener('change', checkDob);
     }
 })
 
@@ -18,7 +17,7 @@ elements.forEach(id => {
  * 
  * @param {Event} e 
  */
-function invalid(e) {
+function onInvalid(e) {
     let element = e.currentTarget;
     let type = element.getAttribute('type');
     switch (type) {
@@ -30,15 +29,17 @@ function invalid(e) {
             break;
         default:
             element.setCustomValidity('Fill this input');
+            break;
     }
-    element.focus();
     element.classList.add('error');
 }
 
 function onInput(e) {
     let currentTarget = e.currentTarget;
-    if (currentTarget.value.length > 0)
+    if (currentTarget.value.length > 0) {
+        currentTarget.setCustomValidity('');
         currentTarget.classList.remove('error');
+    }
 }
 
 function confirmEmail(e) {
