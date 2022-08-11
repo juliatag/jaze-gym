@@ -190,7 +190,7 @@
     <div class="modal-content has-background-white py-5 px-6">
       <div class="container">
 
-        <form>
+        <form autocomplete="on" id="signup-form">
           <div class="field container my-5 mx-3 control select is-fullwidth">
             <label for="selectplan" class="is-hidden">Select your Plan</label>
             <select id="selectplan" class="has-background-primary has-text-white" required>
@@ -258,11 +258,11 @@
               </div>
               <div class="control column p-0 is-4">
                 <label for="postalcode" class="is-hidden">Postal Code</label>
-                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required maxlength="7" >
+                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required maxlength="7"  pattern="^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY][0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ] {0,1}[0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ][0-9]$">
               </div>
               <div class="control column p-0 pl-3 is-3">
                 <label for="province" class="is-hidden">Province</label>
-                <input id="province" class="input is-rounded" type="text" placeholder="Province" required maxlength="2">
+                <input id="province" class="input is-rounded" type="text" placeholder="Province Code" required maxlength="2"  pattern="[A-Za-z][A-Za-z]">
               </div>
             </div>
 

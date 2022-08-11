@@ -1,15 +1,15 @@
 'use strict';
-let elements = ['fn', 'ln', 'email', 'email-confirm', 'dob'];
+let elements =document.querySelectorAll('#signup-form input', '#signup-form select');
 
-elements.forEach(id => {
-    document.getElementById(id).addEventListener('invalid', onInvalid);
-    document.getElementById(id).addEventListener('input', onInput);
-    if (id === 'email-confirm') {
-        document.getElementById(id).addEventListener('change', confirmEmail);
-    } else if (id === 'dob') {
-        let dob = document.getElementById(id);
+elements.forEach(el => {
+    el.addEventListener('invalid', onInvalid);
+    el.addEventListener('input', onInput);
+    if (el.id === 'email-confirm' || el.id === 'email') {
+        el.addEventListener('input', () => confirmEmail('email','email-confirm'));
+    } else if (el.id === 'dob') {
+       
         let max = `${(new Date()).getFullYear() - 14}-01-01`;
-        dob.setAttribute('max', max);
+        el.setAttribute('max', max);
     }
 })
 
@@ -22,13 +22,15 @@ function onInvalid(e) {
     let type = element.getAttribute('type');
     switch (type) {
         case 'email':
-            element.setCustomValidity('Please enter a valid email');
+            if(!element.validity.customError) {
+                element.setCustomValidity('Please enter a valid email');
+            }
             break;
         case 'date':
             element.setCustomValidity('Please enter a valid date');
             break;
         default:
-            element.setCustomValidity('Fill this input');
+            element.setCustomValidity('This field is required');
             break;
     }
     element.classList.add('error');
@@ -42,11 +44,15 @@ function onInput(e) {
     }
 }
 
-function confirmEmail(e) {
-    let confirmEmail = e.currentTarget;
-    let email = document.getElementById('email');
-    if (confirmEmail.value != email.value) {
-        confirmEmail.setCustomValidity('Email must match');
+function confirmEmail(emailID, confirmationID) {
+    const email = document.getElementById(emailID);
+    const confirmation = document.getElementById(confirmationID);
+    if (email.value != confirmation.value) {
+        confirmation.classList.add('error');
+        confirmation.setCustomValidity('Email must match');
+    } else {
+        confirmation.setCustomValidity('');
+        confirmation.classList.remove('error');
     }
 }
 
