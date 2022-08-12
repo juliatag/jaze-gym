@@ -24,6 +24,7 @@ signupButtons.forEach(signupButton => {
             enableChildrenDiv(true);
         } else if (e.currentTarget.id === 'btnStandard') {
             selectPlan.value = 'standard';
+            enableChildrenDiv(false);
         }
     })
 });
@@ -64,7 +65,7 @@ buttonPlus.addEventListener('click', () => {
     var childName = document.createElement("input");
     childName.type = "text"
     childName.value = "";
-    childName.placeholder = "insert child's name";
+    childName.placeholder = "Child's name";
     childName.required = "required";
     childName.classList.add('input', 'is-rounded');
 
