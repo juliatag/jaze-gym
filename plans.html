@@ -67,7 +67,7 @@
             </ul>
             <p class="is-size-6 has-text-centered mt-5"><strong> 60$/month</strong></p>
             <div class="buttons is-centered mt-5">
-              <a class="button is-centered is-rounded is-primary btn-signup">
+              <a class="button is-centered is-rounded is-primary btn-signup" id="btnStandard">
                 Sign up
               </a>
             </div>
@@ -97,7 +97,7 @@
             </ul>
             <p class="is-size-6 has-text-centered mt-5"><strong>100$/month</strong></p>
             <div class="buttons is-centered  mt-5">
-              <a class="button is-rounded is-primary btn-signup">
+              <a class="button is-rounded is-primary btn-signup" id="btnMoms">
                 Sign up
               </a>
             </div>
@@ -143,12 +143,14 @@
     <script src="scripts/addFooter.js" defer></script>
   </footer>
 
-
+  <!-- Create Modal -->
   <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-content has-background-white py-5 px-6">
       <div class="container">
 
+        <form>
+          <!-- Plan Select -->
         <form autocomplete="on" id="signup-form">
           <div class="field container my-5 mx-3 control select is-fullwidth">
             <label for="selectplan" class="is-hidden">Select your Plan</label>
@@ -198,7 +200,28 @@
               </div>
             </div>
 
+            <!-- Children Info -->
+            <div id="children-info" class="mb-4 mx-6 is-hidden">
+              <label class="label">Children Info</label>
+              <div class="field is-flex">
+                <div class="control">
+                  <button type="button" id="buttonPlus" class="button is-primary has-text-white is-size-7"><i
+                      class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="control ml-2">
+                  <button type="button" id="buttonMinus" class="button is-primary has-text-white is-size-7"><i
+                      class="fa-solid fa-minus"></i></button>
+                </div>
+              </div>
+              <table id="childrenTable" class="field" style="width: 100%;">
+                <tr>
+                  <td class="is-hidden">&nbsp;</td>
+                </tr>
+              </table>
+            </div>
 
+            <!-- Address Info -->
+            <label class="label mx-6">Address</label>
             <div class="field mt-1 mx-6 is-flex columns column">
               <div class="control mr-2 column p-0">
                 <label for="address" class="is-hidden">Address</label>
@@ -235,6 +258,7 @@
                 <input type="reset" id="clear_form" value="Clear Your Form" class="button is-warning" />
               </div>
             </div>
+          </div>
         </form>
       </div>
     </div>
