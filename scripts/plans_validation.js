@@ -2,6 +2,7 @@
 let elements =document.querySelectorAll('#signup-form input', '#signup-form select');
 
 elements.forEach(el => {
+    debugger;
     el.addEventListener('invalid', onInvalid);
     el.addEventListener('input', onInput);
     if (el.id === 'email-confirm' || el.id === 'email') {
