@@ -68,6 +68,7 @@ buttonPlus.addEventListener('click', () => {
     childName.placeholder = "Child's name";
     childName.required = "required";
     childName.classList.add('input', 'is-rounded');
+    addValidationEventListeners(childName);
 
     //age
     let ageCell = newRow.insertCell();
@@ -81,6 +82,7 @@ buttonPlus.addEventListener('click', () => {
     childAge.min = '0';
     childAge.max = '10';
     childAge.classList.add('input', 'is-rounded');
+    addValidationEventListeners(childAge);
 
 
     nameCell.style.padding = "3px";
