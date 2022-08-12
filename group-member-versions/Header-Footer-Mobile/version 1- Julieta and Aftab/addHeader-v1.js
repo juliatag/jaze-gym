@@ -2,7 +2,7 @@
     authour: Julieta and Aftab
 */
 
-import {addMobileMenuListeners} from './mobile-menu.js';
+import {addMobileMenuListeners} from './mobile-menu-v1.js';
 
 addHeader();
 
