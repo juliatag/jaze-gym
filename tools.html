@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Jaze Gym - Tools</title>
+  <meta name="description"
+    content="Check out our various plans then sign up today and get a free personal training session!" />
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <meta name="keywords" content=" gym, fitness, childcare, pool, sauna, steam sauna, women, equipment, workout, working
+    out, yoga, zumba, playroom, health, trainer, personal trainer, leg press, leg extension, leg curls, calf raise, hip
+    abductor, glute machine, chest press, butterfly, shoulder press, lateral raise, stair master, elliptical, treadmill,
+    zen yoga, crossfit, aerial yoga, body strong, sculp pro, dance, move it, show time, underground parking, 24/7 gym,
+    open late" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="scripts/plans_validation.js" defer></script>
+  <script src="scripts/tools.js"></script>
+
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+
+
+  <header id="header" class="gym tools">
+    <!-- This script adds the site header to the page -->
+    <script src="scripts/addHeader.js" defer></script>
+  </header>
+
+  <!-- Intro Section -->
+  <section id="amenities-header" class="container my-5 p-5">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title mb-2 is-centered">Want to know your BMI?</h2>
+      <p class="is-size-6 px-6-tablet mx-6-tablet">
+        Use this calculator to check out your healt
+      </p>
+    </div>
+  </section>
+
+  <!-- Plans Section -->
+  <section id="plans-plans" class="container my-5 px-4">
+    <div class="columns px-6 pb-6">
+      <div class="column  px-6">
+        <article class="round message is-primary" style="max-width: 350px ;">
+          <div class="message-header has-text-centered">
+            <h3 class="container is-size-4">BMI Calculator</h3>
+          </div>
+          <div class=" box message-body is-size-7 p-5 has-text-dark">
+            <!-- calculator Form -->
+
+            <form autocomplete="on" id="signup-form">
+
+
+              <div class="field container columns my-5 is-flex is-flex-direction-column columns">
+
+                <div class="control column">
+                  <!-- Height Input -->
+                  <div class="columns">
+                    <label for="height" class="column">Height (cm)</label>
+                    <input id="height" class="input is-rounded column" type="number" required>
+                  </div>
+                  <!-- Weight Input -->
+                  <div class="columns">
+                    <label for="weight" class="column">Weight (kg)</label>
+                    <input id="weight" class="input is-rounded column" type="number" required>
+                  </div>
+                  <!-- Age Input -->
+
+                  <div class="columns">
+                    <label for="age" class="column">Age</label>
+                    <input id="age" class="input is-rounded column" type="number" required>
+                  </div>
+                </div>
+
+                <div class="field container my-5 mx-3 control is-fullwidth columns">
+                  <div class="control ml-2 column p-0 is-8">
+                    <input type="button" id="submit" value="Submit" class="button is-primary is-fullwidth" />
+                  </div>
+                  
+                </div>
+              </div>
+            </form>
+
+            <!-- calculator response -->
+            <div class="result">
+              <p class="bmi"><b>BMI :</b> <span></span></p>
+              <p class="health"><b>Health :</b> <span></span></p>
+            </div>
+          </div>
+      </div>
+      </article>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Sign up care  Section -->
+
+  <section id="plans-signup" class="container my-5 px-4 hide-print">
+    <div class="columns reverse-row reverse-cols-m">
+      <div class="column  p-6">
+        <div class="container has-text-centered-mobile">
+          <h2 class="title mb-2">
+            Cool Punchline..
+          </h2>
+          <p class="mb-4 is-size-6">
+            Add some motivational text here...
+          </p>
+          <a href="plans.html"> <button class="button is-rounded is-primary">Sign Up</button></a>
+        </div>
+      </div>
+      <div class="column">
+
+        <figure class="image is-5by3">
+          <img src="images/trainer.jpg" class="img-cover ">
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--Footer-->
+  <footer class="footer" id="footer">
+    <!-- This script adds the site footer to the page -->
+    <script src="scripts/addFooter.js" defer></script>
+  </footer>
+
+  <!-- Create Modal -->
+
+</body>
+
+</html>
