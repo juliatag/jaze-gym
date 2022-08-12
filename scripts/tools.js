@@ -4,20 +4,34 @@ let $height = $("#height");
 
 let baseUrl = `https://fitness-calculator.p.rapidapi.com/`;
 
+const settings = {
+	async: true,
+	crossDomain: true,
+	url: baseUrl,
+	method: "GET",
+	headers: {
+	  "X-RapidAPI-Key": "b3fac6f21cmsh1046448cb17e58ap14a9f2jsn993b6500d6de",
+	  "X-RapidAPI-Host": "fitness-calculator.p.rapidapi.com",
+	},
+  };
+
+
+  //document.getElementById('submit').addEventListener('click', showBmi);
 $("#submit").on("click", showBmi);
 
-//get elements
+function showBmi(e) {
 
-const settings = {
-  async: true,
-  crossDomain: true,
-  url: baseUrl,
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "b3fac6f21cmsh1046448cb17e58ap14a9f2jsn993b6500d6de",
-    "X-RapidAPI-Host": "fitness-calculator.p.rapidapi.com",
-  },
-};
+	//e.preventDefault();
+
+	let requestUrl = baseUrl + getBmiParams();
+	settings.url = requestUrl;
+
+	$.ajax(settings).done(function (response) {
+		$(".result .bmi span").text(response.data.bmi);
+		$(".result .health span").text(response.data.health);
+	  });
+
+}
 
 function getBmiParams() {
   let age = $age.val();
@@ -32,15 +46,5 @@ function getBmiParams() {
 
 
 
-function showBmi() {
 
-	let requestUrl = baseUrl + getBmiParams();
-	settings.url = requestUrl;
-
-	$.ajax(settings).done(function (response) {
-		$(".result .bmi span").text(response.data.bmi);
-		$(".result .health span").text(response.data.health);
-	  });
-
-}
 
