@@ -19,46 +19,16 @@
     abductor, glute machine, chest press, butterfly, shoulder press, lateral raise, stair master, elliptical, treadmill,
     zen yoga, crossfit, aerial yoga, body strong, sculp pro, dance, move it, show time, underground parking, 24/7 gym,
     open late" />
+    <script defer src="scripts/plans_validation.js"></script> 
 </head>
 
-<body>
+<body >
   <!-- Header with Navigation -->
-  <header id="header">
-    <nav class="navbar container has-shadow is-white mb-5">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="./">
-          <img src="images/jaze-logo.png"
-            alt="Company logo, a blue outline of a women with a dumb bell and the word jaze" style="max-height:70px"
-            class="px-2 py-2">
-        </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navigation">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="navbar-menu" id="navigation">
-        <div class="navbar-end">
-          <a href="plans.html" class="navbar-item has-background-primary has-text-weight-bold">Plans</a>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">Gym</a>
-            <div class="navbar-dropdown">
-              <a href="equipment.html" class="navbar-item">Equipment</a>
-              <a href="amenities.html" class="navbar-item">Amenities</a>
-              <a href="classes.html" class="navbar-item">Classes</a>
-              <a href="trainers.html" class="navbar-item">Personal Trainers</a>
-            </div>
-          </div>
-          <a href="childcare.html" class="navbar-item">Child Care</a>
-          <a href="about.html" class="navbar-item">About</a>
-          <a href="plans.html" class="navbar-item has-text-weight-bold">
-            <button class="button is-primary is-rounded has-text-weight-bold">Sign Up</button>
-          </a>
-          <a href="fr/index.html" class="navbar-item">FR</a>
-        </div>
-      </div>
-    </nav>
+
+  <header id="header" class="plans">
+    <!-- This script adds the site header to the page -->
+    <script src="scripts/addHeader.js" defer></script>
   </header>
 
   <!-- Intro Section -->
@@ -167,21 +137,10 @@
 
 
 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p class="is-size-7">
-        JAZE Gym &copy; 2022
-      </p>
-      <p class="is-size-7 ">
-        123 Monkland Ave, Montreal, QC H4A 3T7 Canada
-      </p>
-      <div class="is-size-4 has-text-primary">
-        <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-
-      </div>
-    </div>
+  <!--Footer-->
+  <footer class="footer" id="footer">
+    <!-- This script adds the site footer to the page -->
+    <script src="scripts/addFooter.js" defer></script>
   </footer>
 
   <!-- Create Modal -->
@@ -192,9 +151,10 @@
 
         <form>
           <!-- Plan Select -->
+        <form autocomplete="on" id="signup-form">
           <div class="field container my-5 mx-3 control select is-fullwidth">
             <label for="selectplan" class="is-hidden">Select your Plan</label>
-            <select id="selectplan" class="has-background-primary has-text-white">
+            <select id="selectplan" class="has-background-primary has-text-white" required>
               <option value="" selected disabled>Select your plan</option>
               <option value="standard">Standard</option>
               <option value="moms">Moms</option>
@@ -209,26 +169,25 @@
             </div>
             <div class="control mx-6 column">
               <label for="ln" class="is-hidden">Last Name</label>
-              <input class="input is-rounded" type="text" placeholder="Last Name" required>
+              <input class="input is-rounded" id = "ln" type="text" placeholder="Last Name" required>
             </div>
 
 
             <div class="field mt-1 mx-6 is-flex column">
               <div class="control mr-2">
                 <label for="email" class="is-hidden">E-mail</label>
-                <input id="email" class="input is-rounded" type="text" placeholder="e-mail" required>
+                <input id="email" class="input is-rounded" type="email" placeholder="e-mail"  required pattern="[\w\.\-]+@[\w]+\.[\w]{2,4}" >
               </div>
               <div class="control ml-2">
                 <label for="email-confirm" class="is-hidden">Confirm E-mail</label>
-                <input id="email-confirm" class="input is-rounded" type="text" placeholder="confirm e-mail" required>
+                <input id="email-confirm" class="input is-rounded" type="email" placeholder="confirm e-mail"  required pattern="[\w\.\-]+@[\w]+\.[\w]{2,4}">
               </div>
             </div>
 
             <div class="field mx-6 is-flex column columns">
               <div class="control mr-2 column p-0">
                 <label for="dob" class="">Date of Birth</label>
-                <input id="dob" class="input is-rounded is-fullwidth" type="date" max="2022-01-01" min="1900-01-01"
-                  required>
+                <input id="dob" class="input is-rounded is-fullwidth" type="date" min="1900-01-01" required>
               </div>
               <div class="control ml-2 column p-0">
                 <label for="gender" class="is-invisible">Gender</label>
@@ -281,12 +240,11 @@
               </div>
               <div class="control column p-0 is-4">
                 <label for="postalcode" class="is-hidden">Postal Code</label>
-                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required
-                  maxlength="7">
+                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required maxlength="7"  pattern="^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY][0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ] {0,1}[0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ][0-9]$">
               </div>
               <div class="control column p-0 pl-3 is-3">
                 <label for="province" class="is-hidden">Province</label>
-                <input id="province" class="input is-rounded" type="text" placeholder="Province" required maxlength="2">
+                <input id="province" class="input is-rounded" type="text" placeholder="Province Code" required maxlength="2"  pattern="[A-Za-z][A-Za-z]">
               </div>
             </div>
 
