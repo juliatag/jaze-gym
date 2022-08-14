@@ -19,6 +19,8 @@
     abductor, glute machine, chest press, butterfly, shoulder press, lateral raise, stair master, elliptical, treadmill,
     zen yoga, crossfit, aerial yoga, body strong, sculp pro, dance, move it, show time, underground parking, 24/7 gym,
     open late" />
+    <script defer src="scripts/feedbackform_modal.js"></script>
+    <script defer src="scripts/feedbackform_validation.js"></script> 
 </head>
 
 <body>
@@ -143,21 +145,86 @@
     </div>
   </section>
 
-  <!-- Sign Up Button-->
+<!-- Feedbackform Section -->
 
-  <section id="about-sign-up" class="container my-5 p-5 hide-print">
-    <div class="container is-max-desktop has-text-centered">
-        <h2 class="title mb-2 is-centered">Join us</h2>
-        <p class="mb-6 is-size-6 px-6-tablet mx-6-tablet">
-            We are here to help you grow!
+<section id="founder" class="container my-5 p-5">
+  <div class="columns reverse-cols-m">
+    <div class="column  p-6">
+      <div class="container has-text-centered-mobile">
+        <h2 class="title mb-2">
+          Join us
+        </h2>
+        <p class="mb-4 is-size-6">
+          We are here to help you grow!
         </p>
-        <div class="buttons is-centered mt-4 ">
-            <a class="button is-rounded is-primary" href="plans.html">
-                Sign up
-            </a>
-        </div>
+      </div>
+      <div class="buttons is-centered mt-4 ">
+          <a class="button is-rounded is-primary" href="plans.html">
+              Sign up
+          </a>
+      </div>
     </div>
+    <div class="column  p-6">
+      <div class="container has-text-centered-mobile">
+        <h2 class="title mb-2">
+          Your feedback
+        </h2>
+        <p class="mb-4 is-size-6">
+          Let us know how we can better service you!
+        </p>
+      </div>
+      <div class="buttons is-centered mt-4 ">
+          <a class="button is-rounded is-primary btn-feedback">
+              Feedback from
+          </a>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- Modal for feedbackform -->
+
+  <div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content has-background-white py-5 px-6">
+    <div class="container">
+
+      <form autocomplete="on" id="feedback-form">
+
+        <div class="field container columns my-5 is-flex is-flex-direction-column columns">
+          <label class="label mx-6">Your Feedback Here</label>
+          <div class="control mx-6 column">
+            <label for="name" class="">Your Name</label>
+            <input id="name" class="input is-rounded" type="text" placeholder="" required>
+          </div>
+
+          <div class="control mx-6 column">
+            <label for="frequency" class="">How often do you visit our gym?</label>
+            <input id="frequency" class="input is-rounded" type="text" placeholder="example: 3 times/week" required>
+          </div>
+
+          <div class="control mx-6 column">
+            <label for="rating" class="">From 1 (unhappy) to 5 (very happy), how would you rate your overall satisfaction with us?</label>
+            <input id="rating" class="input is-rounded" type="number" placeholder="" required>
+          </div>
+
+          <div class="control mx-6 column">
+            <label for="thoughts" class="">Share additional thoughts with us</label>
+            <input id="thoughts" class="input is-rounded" type="text" placeholder="" required>
+          </div>
+
+          <div class="field container my-5 mx-3 control is-fullwidth columns">
+            <div class="control ml-2 column p-0 is-8">
+              <input type="submit" id="submit" value="Submit" class="button is-primary is-fullwidth" />
+            </div>
+            <div class="control ml-2 column p-0 is-4">
+              <input type="reset" id="clear_form" value="Clear Your Form" class="button is-warning" />
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
  
 <!--Footer-->
 <footer class="footer" id="footer">
