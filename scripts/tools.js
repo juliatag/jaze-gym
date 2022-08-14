@@ -66,7 +66,7 @@ function calculateBMI(event) {
 			$("#form-bmi .bmi span").text(response.data.bmi);
 			$("#form-bmi .health span").text(response.data.health);
 			$('#form-bmi .result')
-				.removeClass('is-hidden')
+				.removeClass('is-hidden has-background-info has-background-success has-background-warning has-background-danger')
 				.addClass(() => {
 					let bmi = response.data.bmi;
 					if (bmi < 18.5)
