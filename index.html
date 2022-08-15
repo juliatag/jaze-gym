@@ -1,251 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <title>Jaze Gym for women and mothers - Home</title>
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-  <meta name="description"
-    content="Join us to workout in a comfortable modern gym for women only with childcare during your workout!" />
-  <meta name="keywords" content=" gym, fitness, childcare, pool, sauna, steam sauna, women, equipment, workout, working
+    <title>Jaze Gym for women and mothers - Home</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <meta
+      name="description"
+      content="Join us to workout in a comfortable modern gym for women only with childcare during your workout!"
+    />
+    <meta
+      name="keywords"
+      content=" gym, fitness, childcare, pool, sauna, steam sauna, women, equipment, workout, working
     out, yoga, zumba, playroom, health, trainer, personal trainer, leg press, leg extension, leg curls, calf raise, hip
     abductor, glute machine, chest press, butterfly, shoulder press, lateral raise, stair master, elliptical, treadmill,
     zen yoga, crossfit, aerial yoga, body strong, sculp pro, dance, move it, show time, underground parking, 24/7 gym,
-    open late" />
-</head>
+    open late"
+    />
+  </head>
 
-<body>
-  <!-- Header with Navigation -->
+  <body>
+    <!-- Header with Navigation -->
 
-  <header id="header">
-    <!-- This script adds the site header to the page -->
-    <script src="scripts/addHeader.js" defer></script>
-  </header>
+    <header id="header">
+      <!-- This script adds the site header to the page -->
+      <script src="scripts/addHeader.js" defer></script>
+    </header>
 
-  <!-- Intro Section -->
+    <!-- Intro Section -->
 
-  <section id="home-intro" class="container my-5 px-4">
-    <div class="columns reverse-cols-m">
-      <div class="column  p-6">
-        <div class="container has-text-centered-mobile">
-          <h2 class="title mb-2 ">
-            A comfortable place to get fit.
-          </h2>
-          <p class="mb-4 is-size-6 ">
-            Women Owned, run, and staffed, our woman only gym is a safe space for you to pursue your personal growth and
-            physical wellbeing goals. Workout, swim and enjoy the sauna. Take time for yourself!
-          </p>
-          <a href="plans.html"><button class="button is-rounded is-primary">Plans</button></a>
+    <section id="home-intro" class="container my-5 px-4">
+      <div class="columns reverse-cols-m">
+        <div class="column p-6">
+          <div class="container has-text-centered-mobile">
+            <h2 class="title mb-2">A comfortable place to get fit.</h2>
+            <p class="mb-4 is-size-6">
+              Women Owned, run, and staffed, our woman only gym is a safe space
+              for you to pursue your personal growth and physical wellbeing
+              goals. Workout, swim and enjoy the sauna. Take time for yourself!
+            </p>
+            <button
+              onClick="location.href='plans.html'"
+              class="button is-rounded is-primary"
+            >
+              Plans</button
+            ><!-- Error1/7, button inside a not allowed, replaced by button with onClick -->
+          </div>
+        </div>
+        <div class="column">
+          <figure class="image is-5by3">
+            <img
+              src="images/gym.jpg"
+              alt="Blue walls surround treadmills and other gym equipment in a well lit room"
+              class="img-cover"
+            />
+          </figure>
         </div>
       </div>
-      <div class="column">
+    </section>
 
-        <figure class="image is-5by3">
-          <img src="images/gym.jpg" alt="Blue walls surround treadmills and other gym equipment in a well lit room"
-            class="img-cover ">
-        </figure>
+    <!-- Child care  Section -->
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Child care  Section -->
-
-  <section id="childcare-intro" class="container my-5 px-4">
-    <div class="columns reverse-row reverse-cols-m">
-      <div class="column  p-6">
-        <div class="container has-text-centered-mobile">
-          <h2 class="title mb-2">
-            Need help with your kids while you work out? We got you!
-          </h2>
-          <p class="mb-4 is-size-6">
-            Our well trained, loving and caring staff are ready to welcome your children while you work out! Don’t let
-            your children be another excuse to stay away from the gym! They will love our playroom and animators and you
-            will get a break. This gym was created to create space for you to work on you. Let us help!
-          </p>
-          <a href="childcare.html"> <button class="button is-rounded is-primary">Childcare</button></a>
+    <section id="childcare-intro" class="container my-5 px-4">
+      <div class="columns reverse-row reverse-cols-m">
+        <div class="column p-6">
+          <div class="container has-text-centered-mobile">
+            <h2 class="title mb-2">
+              Need help with your kids while you work out? We got you!
+            </h2>
+            <p class="mb-4 is-size-6">
+              Our well trained, loving and caring staff are ready to welcome
+              your children while you work out! Don’t let your children be
+              another excuse to stay away from the gym! They will love our
+              playroom and animators and you will get a break. This gym was
+              created to create space for you to work on you. Let us help!
+            </p>
+            <button
+              onClick="location.href='childcare.html'"
+              class="button is-rounded is-primary"
+            >
+              Childcare</button
+            ><!-- Error2/7, button inside a not allowed, replaced by button with onClick -->
+          </div>
+        </div>
+        <div class="column">
+          <figure class="image is-5by3">
+            <img
+              src="images/kids.jpg"
+              alt="Four happy children with their arms around eachother"
+              class="img-cover"
+            />
+          </figure>
         </div>
       </div>
-      <div class="column">
+    </section>
 
-        <figure class="image is-5by3">
-          <img src="images/kids.jpg" alt="Four happy children with their arms around eachother" class="img-cover ">
-        </figure>
+    <!-- Equip Section -->
 
+    <section id="equipment-intro" class="container my-5 px-4">
+      <div class="columns reverse-cols-m">
+        <div class="column p-6">
+          <div class="container has-text-centered-mobile">
+            <h2 class="title mb-2">Quality Gear for the optimal workout.</h2>
+            <p class="mb-4 is-size-6">
+              From Leg day to upper body day, from cardio to yoga, we have all
+              the equipment you need to succeed! Keeping the equipment running
+              right is a great pride of ours. We make sure there is enough for
+              everyone.
+            </p>
+            <button
+              onClick="location.href='equipment.html'"
+              class="button is-rounded is-primary"
+            >
+              Equipment</button
+            ><!-- Error3/7, button inside a not allowed, replaced by button with onClick -->
+          </div>
+        </div>
+        <div class="column">
+          <figure class="image is-5by3">
+            <img
+              src="images/gear.jpg"
+              alt="two blue two kilogram dumbells on the floor"
+              class="img-cover"
+            />
+          </figure>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Equip Section -->
+    <!-- Classes   Section -->
 
-  <section id="equipment-intro" class="container my-5 px-4">
-    <div class="columns reverse-cols-m">
-      <div class="column  p-6">
-        <div class="container has-text-centered-mobile">
-          <h2 class="title mb-2">
-            Quality Gear for the optimal workout.
-          </h2>
-          <p class="mb-4 is-size-6">
-            From Leg day to upper body day, from cardio to yoga, we have all the equipment you need to succeed! Keeping
-            the equipment running right is a great pride of ours. We make sure there is enough for everyone.
-          </p>
-          <a href="equipment.html">
-            <button class="button is-rounded is-primary">Equipment</button>
+    <section id="classes-intro" class="container my-5 px-4">
+      <div class="columns reverse-row reverse-cols-m">
+        <div class="column p-6">
+          <div class="container has-text-centered-mobile">
+            <h2 class="title mb-2">
+              Groove with the girls? Asana with the sangha? YES with our group
+              classes!
+            </h2>
+            <p class="mb-4 is-size-6">
+              Zumba, yoga, Spinning and WINNING! Our group classes are included
+              with your membership. Our professional trainers will lead you in
+              achieving your maximum potential through well designed programs.
+              We know training can feel lonely sometimes and accountability
+              through relationships can really bring your routine to the next
+              level. There are even some classes for you and your little ones!
+            </p>
+            <button
+              onClick="location.href='classes.html'"
+              class="button is-rounded is-primary"
+            >
+              Classes</button
+            ><!-- Error4/7, button inside a not allowed, replaced by button with onClick -->
+          </div>
+        </div>
+        <div class="column">
+          <figure class="image is-5by3">
+            <img
+              src="images/zumba.jpg"
+              alt="Women smiling well doing a zoomba class"
+              class="img-cover"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- Trainer Section -->
+
+    <section id="trainer-intro" class="container my-5 px-4">
+      <div class="columns reverse-cols-m">
+        <div class="column p-6">
+          <div class="container has-text-centered-mobile">
+            <h2 class="title mb-2">
+              New to training and don’t know where to start? We have a trainer
+              for you!
+            </h2>
+            <p class="mb-4 is-size-6">
+              Fully accredited our trainers have all the knowledge to guide you
+              on your health journey. They are chosen based on their
+              communication so they can help guide you in the most productive
+              way. They have a real passion for fitness and will personalize
+              your routine based on your physical needs. Don’t be shy, let us
+              show you how its done!
+            </p>
+            <button
+              onClick="location.href='trainers.html'"
+              class="button is-rounded is-primary"
+            >
+              Trainers</button
+            ><!-- Error5/7, button inside a not allowed, replaced by button with onClick -->
+          </div>
+        </div>
+        <div class="column">
+          <figure class="image is-5by3">
+            <img
+              src="images/trainer.jpg"
+              alt="A trainer holds a womens legs while she performs sit ups"
+              class="img-cover"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities care  Section -->
+
+    <section id="amenities-intro" class="container my-5 px-4">
+      <div class="columns reverse-row reverse-cols-m">
+        <div class="column p-6">
+          <div class="container has-text-centered-mobile">
+            <h2 class="title mb-2">Everything you need in one place.</h2>
+            <p class="mb-4 is-size-6">
+              Equipment, trainers, childcare, swimming pool, lockers, showers,
+              and sauna. All clean and all well designed you will feel
+              comfortable and at home every time you come in.
+            </p>
+            <button
+              onClick="location.href='amenities.html'"
+              class="button is-rounded is-primary"
+            >
+              Amenities</button
+            ><!-- Error6/7, button inside a not allowed, replaced by button with onClick -->
+          </div>
+        </div>
+        <div class="column">
+          <figure class="image is-5by3">
+            <img
+              src="images/pool.png"
+              alt="a luxurious pool with a dome glass ceiling"
+              class="img-cover"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+
+    <section id="location-intro" class="container my-5 px-4">
+      <div class="columns reverse-cols-m">
+        <div class="column p-6">
+          <div class="container has-text-centered-mobile">
+            <h2 class="title mb-2">Convenient underground parking!</h2>
+            <p class="mb-4 is-size-6">
+              Our location at 123 Monkland is right near the Villa Maria metro
+              station for those using transit and has free underground parking
+              for those driving cars.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1867.2068034984354!2d-73.6228687267589!3d45.47687154015964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2f41368c5d0992fe!2zNDXCsDI4JzM1LjUiTiA3M8KwMzcnMTkuOSJX!5e0!3m2!1sen!2sus!4v1657909241436!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border: 0; width: 100%; height: 350px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <!-- Error7/7, stray div tag, deleted -->
+    </section>
+
+    <!-- SIgn Up Buttom-->
+    <section id="home-sign-up" class="container my-5 p-5 hide-print">
+      <div class="container is-max-desktop has-text-centered">
+        <h2 class="title mb-2 is-centered">Like our women only gym?</h2>
+        <p class="mb-6 is-size-6 px-6-tablet mx-6-tablet">
+          Come train at a save space that is tailored to you!
+        </p>
+        <div class="buttons is-centered mt-4">
+          <a class="button is-rounded is-primary" href="plans.html">
+            Sign up
           </a>
         </div>
       </div>
-      <div class="column">
+    </section>
 
-        <figure class="image is-5by3">
-          <img src="images/gear.jpg" alt="two blue two kilogram dumbells on the floor" class="img-cover">
-        </figure>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Classes   Section -->
-
-  <section id="classes-intro" class="container my-5 px-4">
-    <div class="columns reverse-row reverse-cols-m">
-      <div class="column  p-6">
-        <div class="container has-text-centered-mobile">
-          <h2 class="title mb-2">
-            Groove with the girls? Asana with the sangha? YES with our group classes!
-          </h2>
-          <p class="mb-4 is-size-6">
-            Zumba, yoga, Spinning and WINNING! Our group classes are included with your membership. Our professional
-            trainers will lead you in achieving your maximum potential through well designed programs. We know training
-            can feel lonely sometimes and accountability through relationships can really bring your routine to the next
-            level. There are even some classes for you and your little ones!
-          </p>
-          <a href="classes.html">
-            <button class="button is-rounded is-primary">Classes</button>
-          </a>
-        </div>
-      </div>
-      <div class="column">
-
-        <figure class="image is-5by3">
-          <img src="images/zumba.jpg" alt="Women smiling well doing a zoomba class" class="img-cover ">
-        </figure>
-
-      </div>
-    </div>
-  </section>
-  <!-- Trainer Section -->
-
-  <section id="trainer-intro" class="container my-5 px-4">
-    <div class="columns reverse-cols-m">
-      <div class="column  p-6">
-        <div class="container has-text-centered-mobile">
-          <h2 class="title mb-2">
-            New to training and don’t know where to start? We have a trainer for you!
-          </h2>
-          <p class="mb-4 is-size-6">
-            Fully accredited our trainers have all the knowledge to guide you on your health journey. They are chosen
-            based on their communication so they can help guide you in the most productive way. They have a real passion
-            for fitness and will personalize your routine based on your physical needs. Don’t be shy, let us show you
-            how its done!
-          </p>
-          <a href="trainers.html">
-            <button class="button is-rounded is-rounded is-rounded is-primary">Trainers</button>
-          </a>
-        </div>
-      </div>
-      <div class="column">
-
-        <figure class="image is-5by3">
-          <img src="images/trainer.jpg" alt="A trainer holds a womens legs while she performs sit ups"
-            class="img-cover ">
-        </figure>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Amenities care  Section -->
-
-  <section id="amenities-intro" class="container my-5 px-4">
-    <div class="columns reverse-row reverse-cols-m">
-      <div class="column  p-6">
-        <div class="container has-text-centered-mobile">
-          <h2 class="title mb-2">
-            Everything you need in one place.
-          </h2>
-          <p class="mb-4 is-size-6">
-            Equipment, trainers, childcare, swimming pool, lockers, showers, and sauna. All clean and all well designed
-            you will feel comfortable and at home every time you come in.
-          </p>
-          <a href="amenities.html">
-            <button class="button is-rounded is-primary">Amenities</button>
-          </a>
-        </div>
-      </div>
-      <div class="column">
-
-        <figure class="image is-5by3">
-          <img src="images/pool.png" alt="a luxurious pool with a dome glass ceiling" class="img-cover ">
-        </figure>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Location Section -->
-
-  <section id="location-intro" class="container my-5 px-4">
-    <div class="columns reverse-cols-m">
-      <div class="column  p-6">
-        <div class="container has-text-centered-mobile">
-          <h2 class="title mb-2">
-            Convenient underground parking!
-          </h2>
-          <p class="mb-4 is-size-6">
-            Our location at 123 Monkland is right near the Villa Maria metro station for those using transit and has
-            free
-            underground parking for those driving cars.
-          </p>
-
-        </div>
-      </div>
-      <div class="column">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1867.2068034984354!2d-73.6228687267589!3d45.47687154015964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2f41368c5d0992fe!2zNDXCsDI4JzM1LjUiTiA3M8KwMzcnMTkuOSJX!5e0!3m2!1sen!2sus!4v1657909241436!5m2!1sen!2sus"
-          width="600" height="450" style="border:0;width: 100%;height: 350px;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- SIgn Up Buttom-->
-  <section id="home-sign-up" class="container my-5 p-5 hide-print">
-    <div class="container is-max-desktop has-text-centered">
-      <h2 class="title mb-2 is-centered">Like our women only gym?</h2>
-      <p class="mb-6 is-size-6 px-6-tablet mx-6-tablet">
-        Come train at a save space that is tailored to you!
-      </p>
-      <div class="buttons is-centered mt-4 ">
-        <a class="button is-rounded is-primary" href="plans.html">
-          Sign up
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!--Footer-->
-  <footer class="footer" id="footer">
-    <!-- This script adds the site footer to the page -->
-    <script src="scripts/addFooter.js" defer></script>
-  </footer>
-</body>
-
+    <!--Footer-->
+    <footer class="footer" id="footer">
+      <!-- This script adds the site footer to the page -->
+      <script src="scripts/addFooter.js" defer></script>
+    </footer>
+  </body>
 </html>
