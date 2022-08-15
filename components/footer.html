@@ -11,150 +11,95 @@
     <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
 
   </div>
-  <h3 class="is-size-5 has-text-white">We appreciate your Feedback!</h3>
-  <p class="is-size-7">Feel free to let us know what you think about our...</p>
-  <div class="columns is-centered is-mobile">
-
-    <div class="column has-text-centered is-narrow">
-      <div class="buttons is-centered mt-4 ">
-        <a class="button is-rounded is-primary is-link is-small" id="gymFeedbackBtn">
-          Gym
-        </a>
-      </div>
-    </div>
-
-    <div class="column has-text-centered is-narrow">
-      <div class="buttons is-centered mt-4 ">
-        <a class="button is-rounded is-link is-small" id="siteFeedbackBtn">
-          Website
-        </a>
-      </div>
-    </div>
-
+  <p class="is-size-7">We appreciate your Feedback!</p>
+  <div class="buttons is-centered mt-4 ">
+    <a class="button is-rounded is-primary is-link is-small" id="feedbackBtn">
+      Feedback
+    </a>
   </div>
 </div>
 
 <!-- Gym Modal feedback Form-->
 
-<div class="modal has-text-dark" id="modalGym">
-  <div class="modal-background"></div>
-
-
-  <form autocomplete="on" id="feedback-form" class="modal-card">
-    <div class="field container columns my-5 is-flex is-flex-direction-column columns">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Help us improve our Services</p>
-      </header>
-      <section class="modal-card-body">
-
- <!-- Name Start -->
- <div class="field">
-  <label for="name" class="">Your Name</label>
-  <div class="control has-icons-left">
-    <input class="input is-success name" type="text" placeholder="" required>
-    <div class="icon is-small is-left">
-      <i class="fas fa-user"></i>
-    </div>
-  </div>
-</div>
-
- <!-- Gym Frequency -->
- <div class="field">
-  <label for="frequency" class="">How often do you visit our gym?</label>
-    <div class="field has-addons control">
-      <p class="control is-expanded">
-        <input id="frequency" class="input " type="number" placeholder="0" required>
-      </p>
-      <p class="control">
-        <span class="select">
-          <select>
-            <option>per week</option>
-            <option>per month</option>
-            <option>per year</option>
-          </select>
-        </span>
-      </p>
-    </div>
-</div>
-
- <!-- Satisfaction -->
- <div class="field">
-  <label class="">From 1 (unhappy) to 5 (very happy), how would you rate your overall
-    satisfaction with us?</label>
-  <div class="control is-flex ">
-    <i class="fas fa-face-frown has-text-danger is-size-3"></i>
-    <input type="range" min="1" max="5" step="1" id="1" name="rating" value="5" class="is-align-self-stretch">
-    <i class="fas fa-face-smile has-text-success is-size-3"></i>
-  </div>
-</div>
-
-
-
-
-     
-
-        <div class="control mx-6 column">
-          <label for="thoughts" class="">Share additional thoughts with us</label>
-          <textarea id="thoughts" class="textarea is-rounded" type="text" placeholder="" required></textarea>
-        </div>
-
-       
-      </section>
-      <footer class="modal-card-foot">
-        <a id="submit-gym-feed" value="Calculate" class="button is-primary">Send</a>
-        <a class="button is-danger hides-modal">Cancel</a>
-      </footer>
-    </div>
-  </form>
-
-</div>
-
-
-<!-- Site Modal feedback Form-->
-<div class="modal has-text-dark" id="modalSite">
+<div class="modal has-text-dark" id="modal">
   <div class="modal-background hides-modal"></div>
-  <form class="modal-card" id="form-feedback">
+  <form autocomplete="on" id="feedback-form" class="modal-card">
+    <!-- Form Header -->
     <header class="modal-card-head">
-      <p class="modal-card-title">Help us improve</p>
+      <p class="modal-card-title">Help us improve our Services</p>
     </header>
     <section class="modal-card-body">
+
       <!-- Name Start -->
-      <div class="field">
-        <label class="label">Name</label>
+      <div class="field mb-5">
+        <label class="label" for="name">Your Name</label>
         <div class="control has-icons-left">
-          <input class="input name is-success" type="text" placeholder="Your Name">
+          <input class="input is-success name" type="text" placeholder="Your Name" required>
           <div class="icon is-small is-left">
             <i class="fas fa-user"></i>
           </div>
         </div>
       </div>
-      <!-- Name End -->
+
       <!-- Email Start -->
-      <div class="field">
+      <div class="field mb-5">
         <label class="label">Email</label>
         <div class="control has-icons-left">
-          <input class="input is-success email" type="email" placeholder="Your Name">
+          <input class="input is-success email" type="email" placeholder="Your Email">
           <div class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </div>
         </div>
         <p class="help email is-danger is-hidden has-text-weight-semibold">Please enter a valid email (not required)</p>
       </div>
-      <!-- Email End -->
-      <!-- Msg Start -->
-      <div id="msg" class="field">
-        <label class="label">Message*</label>
-        <div class="control">
-          <textarea class="textarea msg" type="text" placeholder="We appreciate your feedback!" minlength="20"
-            required> </textarea>
+
+      <!-- Gym Frequency -->
+      <div class="field mb-5">
+        <label class="label" for="frequency">How often do you visit our gym?</label>
+        <div class="field has-addons ">
+          <div class="control has-icons-left is-expanded">
+            <input id="frequency" class="input" type="number" placeholder="0" required>
+            <div class="icon is-small is-left">
+              <i class="fas fa-calendar"></i>
+            </div>
+          </div>
+          <p class="control">
+            <span class="select">
+              <select>
+                <option>per week</option>
+                <option>per month</option>
+                <option>per year</option>
+              </select>
+            </span>
+          </p>
         </div>
-        <p class="help msg is-danger is-hidden has-text-weight-semibold">Please enter at least 20 characters</p>
       </div>
-      <!-- Msg End -->
+
+      <!-- Satisfaction -->
+      <div class="field mb-5">
+        <label class="label">Rate your overall satisfaction</label>
+        <div class="control is-flex">
+          <i class="fas fa-face-frown has-text-danger is-size-3"></i>
+          <input type="range" min="1" max="5" step="1" id="1" name="rating" value="5"
+            class="mx-3 is-flex-grow-1 is-flex-shrink-1">
+          <i class="fas fa-face-smile has-text-success is-size-3"></i>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="field mb-5">
+        <label class="label" for="thoughts">Any feedback about our services or website?</label>
+        <div class="control">
+          <textarea class="textarea is-rounded" type="text" placeholder="" required></textarea>
+        </div>
+      </div>
     </section>
+
+    <!-- Form Footer -->
     <footer class="modal-card-foot">
-      <a id="submit-site-feed" value="Calculate" class="button is-primary">Send</a>
+      <a id="submit-gym-feed" value="Calculate" class="button is-primary">Send</a>
       <a class="button is-danger hides-modal">Cancel</a>
     </footer>
+
   </form>
 </div>
