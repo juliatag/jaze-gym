@@ -67,7 +67,7 @@ function submit(e) {
       rating: rating,
       msg: msg
     };
-    emailjs.send('service_8zps2hkAFTAB', 'template_h17i7dh', templateParams)
+    emailjs.send('service_8zps2hk', 'template_h17i7dh', templateParams)
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
       }, function (error) {
