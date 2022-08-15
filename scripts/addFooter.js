@@ -52,13 +52,19 @@ function submit(e) {
   const $freq = document.getElementById('frequency');
 
   if (validate($email) && validate($freq)) {
+    //if validation is passed
+
+    //declare and init variables
     const $name = document.querySelector('input.name');
     const name = (($name.value) ? $name.value : 'Anonymous');
     const email = ($email.value) ? $email.value : '';
     const freq = $freq.value + ' times per ' + document.getElementById('per').value;
     const rating = document.getElementById('rating').value;
     const msg = document.getElementById('msg').value;
+    const $thanksMessage = document.createElement('h3');
+    $thanksMessage.classList.add('is-flex-grow-1', 'is-flex-shrink-1','has-text-centered','px-4','has-text-weight-bold');
 
+    //initialise emailjs with form values
     emailjs.init('RjfHFBbtlV7Yc4Ys8');
     var templateParams = {
       name: name,
@@ -67,13 +73,22 @@ function submit(e) {
       rating: rating,
       msg: msg
     };
-    console.log(templateParams);
+    
+    //send email
     emailjs.send('service_8zps2hk', 'template_h17i7dh', templateParams)
       .then(function (response) {
-        console.log('SUCCESS!', response.status, response.text);
+        //Sucess
+        $thanksMessage.innerText = 'Thank you or your Feedback!';
+        //console.log('SUCCESS!', response.status, response.text);
       }, function (error) {
-        console.log('FAILED...', error);
+        //Failed
+        $thanksMessage.innerText = 'Error! Emial not sent.';
+        $thanksMessage.classList.add('has-text-danger');
+        //console.log('FAILED...', error);
       });
+
+      //Add a submit message
+      document.querySelector('#feedback-form footer').appendChild($thanksMessage);
   }
 }
 
