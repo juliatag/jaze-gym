@@ -21,7 +21,7 @@
 
 <!-- Gym Modal feedback Form-->
 
-<div class="modal has-text-dark" id="modal">
+<div class="modal has-text-dark is-active" id="modal">
   <div class="modal-background hides-modal"></div>
   <form autocomplete="on" id="feedback-form" class="modal-card">
     <!-- Form Header -->
@@ -34,7 +34,7 @@
       <div class="field mb-5">
         <label class="label" for="name">Your Name</label>
         <div class="control has-icons-left">
-          <input class="input is-success name" type="text" placeholder="Your Name" required>
+          <input class="input is-success name" type="text" placeholder="Your Name">
           <div class="icon is-small is-left">
             <i class="fas fa-user"></i>
           </div>
@@ -58,7 +58,8 @@
         <label class="label" for="frequency">How often do you visit our gym?</label>
         <div class="field has-addons ">
           <div class="control has-icons-left is-expanded">
-            <input id="frequency" class="input" type="number" placeholder="0" required>
+            <input id="frequency" class="input" type="number" placeholder="0" min="0"
+              oninput="this.value = Math.abs(this.value)" required>
             <div class="icon is-small is-left">
               <i class="fas fa-calendar"></i>
             </div>
@@ -73,6 +74,7 @@
             </span>
           </p>
         </div>
+        <p class="help frequency is-danger is-hidden has-text-weight-semibold">Please enter a positive number</p>
       </div>
 
       <!-- Satisfaction -->
@@ -80,7 +82,7 @@
         <label class="label">Rate your overall satisfaction</label>
         <div class="control is-flex">
           <i class="fas fa-face-frown has-text-danger is-size-3"></i>
-          <input type="range" min="1" max="5" step="1" id="1" name="rating" value="5"
+          <input type="range" min="1" max="5" step="1" id="rating" name="rating" value="5"
             class="mx-3 is-flex-grow-1 is-flex-shrink-1">
           <i class="fas fa-face-smile has-text-success is-size-3"></i>
         </div>
@@ -90,14 +92,14 @@
       <div class="field mb-5">
         <label class="label" for="thoughts">Any feedback about our services or website?</label>
         <div class="control">
-          <textarea class="textarea is-rounded" type="text" placeholder="" required></textarea>
+          <textarea id="msg" class="textarea is-rounded" type="text" placeholder=""></textarea>
         </div>
       </div>
     </section>
 
     <!-- Form Footer -->
     <footer class="modal-card-foot">
-      <a id="submit-gym-feed" value="Calculate" class="button is-primary">Send</a>
+      <a id="submitBtn" value="Calculate" class="button is-primary">Send</a>
       <a class="button is-danger hides-modal">Cancel</a>
     </footer>
 
