@@ -1,5 +1,8 @@
 'use strict';
-let elements =document.querySelectorAll('#signup-form input', '#signup-form select');
+let elements =document.querySelectorAll('#signup-form input, #signup-form select, #bodyFatForm input');
+// let elements =document.querySelectorAll('#bodyFatForm input');
+
+console.log(elements)
 
 
 
@@ -40,6 +43,7 @@ function onInvalid(e) {
             break;
         default:
             element.setCustomValidity('This field is required');
+            
             break;
     }
     element.classList.add('error');

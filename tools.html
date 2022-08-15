@@ -84,7 +84,7 @@
                   <div class="control ml-2 column p-0 is-8">
                     <input type="submit" id="submit" value="Submit" class="button is-primary is-fullwidth" />
                   </div>
-                  
+
                 </div>
               </div>
             </form>
@@ -95,11 +95,96 @@
               <p class="health"><b>Health :</b> <span></span></p>
             </div>
           </div>
+        </article>
       </div>
-      </article>
+      <div class="column  px-6">
+        <article class="round message is-primary" style="max-width: 350px ;">
+          <div class="message-header has-text-centered">
+            <h3 class="container is-size-4">Body fat Calculator</h3>
+          </div>
+          <div class=" box message-body is-size-7 p-5 has-text-dark">
+            <!-- calculator Form -->
+
+            <!-- calculate body fat section -->
+
+            <form autocomplete="on" id="bodyFatForm">
+
+
+              <div class="field container columns my-5 is-flex is-flex-direction-column columns">
+
+                <div class="control column">
+
+                  <!-- Age Input -->
+
+                  <div class="columns">
+                    <label for="ageFat" class="column">Age</label>
+                    <input id="ageFat" class="input is-rounded column" type="number" max="80" required>
+                  </div>
+
+                  <!-- sex Input -->
+                  <div class="columns">
+                    <label for="sexFat" class="column">Sex</label>
+                    <select id="sexFat" name="sex" class="input is-rounded" required>
+                      <option value="female">female</option>
+                      <option value="male">male</option>
+                    </select>
+                  </div>
+
+                  <!-- Height Input -->
+                  <div class="columns">
+                    <label for="heightFat" class="column">Height (cm)</label>
+                    <input id="heightFat" class="input is-rounded column" type="number" min="130" max="230" required>
+                  </div>
+                  <!-- Weight Input -->
+                  <div class="columns">
+                    <label for="weightFat" class="column">Weight (kg)</label>
+                    <input id="weightFat" class="input is-rounded column" type="number" min="40" max="160" required>
+                  </div>
+
+                  <!-- neck size Input -->
+                  <div class="columns">
+                    <label for="neck" class="column">Neck size (cm)</label>
+                    <input id="neck" class="input is-rounded column" type="number" min="20" max="80" required>
+                  </div>
+                  <!-- waist size Input -->
+                  <div class="columns">
+                    <label for="waist" class="column">Waist size (cm)</label>
+                    <input id="waist" class="input is-rounded column" type="number" min="40" max="130" required>
+                  </div>
+                  <!-- hip size Input -->
+                  <div class="columns">
+                    <label for="hip" class="column">Hip size (cm)</label>
+                    <input id="hip" class="input is-rounded column" type="number" min="40" max="130" required>
+                  </div>
+
+                </div>
+
+                <div class="field container my-5 mx-3 control is-fullwidth columns">
+                  <div class="control ml-2 column p-0 is-8">
+                    <input type="submit" id="submitFat" value="Submit" class="button is-primary is-fullwidth" />
+                  </div>
+
+                </div>
+              </div>
+            </form>
+
+            <!-- calculator response -->
+            <div class="fatResult">
+              <p class="bodyFat"><b>BodyFat percentage :</b> <span></span></p>
+              <p class="fatCategory"><b>Bodyfat Category :</b> <span></span></p>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
     </div>
   </section>
+
+
+
+
+
+
 
 
   <!-- Sign up care  Section -->
