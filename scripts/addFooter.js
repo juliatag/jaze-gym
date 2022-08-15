@@ -14,14 +14,17 @@ fetch("components/footer.html")
   .then(loadEmailScript)
   .then(getFeedbackModal);
 
+// Load the emailJs script on any page
 function loadEmailScript() {
-    if (!loaded[url]) {
-      var s = document.createElement('script');
-      s.src = url;
-      document.head.appendChild(s);
-      _loaded[url] = true;
-    }
+  let url = "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js";
+  if (!_loaded[url]) {
+    var s = document.createElement('script');
+    s.src = url;
+    document.head.appendChild(s);
+    _loaded[url] = true;
+  }
 }
+
 function getFeedbackModal() {
   // Create variables for the feedback form buttons, the modal background, and the modal itself
   const feedbackBtn = document.querySelector("#feedbackBtn");
