@@ -90,13 +90,12 @@ function submit() {
             email: email,
             message: msg
         };
-         
+
         emailjs.send('service_8zps2hk', 'template_h17i7dh', templateParams)
-            .then(function(response) {
-               console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-               console.log('FAILED...', error);
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+                console.log('FAILED...', error);
             });
-        
     }
 }
