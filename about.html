@@ -182,6 +182,11 @@
   </div>
 </section>
 
+<footer class="footer" id="footer">
+  <!-- This script adds the site footer to the page -->
+  <script src="scripts/addFooter.js" defer></script>
+</footer>
+
 <!-- Modal for feedbackform -->
 
   <div class="modal">
@@ -200,17 +205,32 @@
 
           <div class="control mx-6 column">
             <label for="frequency" class="">How often do you visit our gym?</label>
-            <input id="frequency" class="input is-rounded" type="text" placeholder="example: 3 times/week" required>
+            <div class="field has-addons">
+              
+              <p class="control is-expanded">
+                <input id="frequency" class="input is-rounded" type="number" placeholder="0" required>
+              </p>
+              <p class="control">
+                <span class="select is-rounded">
+                  <select >
+                    <option>per week</option>
+                    <option>per month</option>
+                    <option>per year</option>
+                  </select>
+                </span>
+              </p>
+            </div>
+            
           </div>
 
           <div class="control mx-6 column">
             <label for="rating" class="">From 1 (unhappy) to 5 (very happy), how would you rate your overall satisfaction with us?</label>
-            <input id="rating" class="input is-rounded" type="number" placeholder="" required>
+            <input id="rating" class="input is-rounded" type="number" placeholder="" min="1" max="5" required>
           </div>
 
           <div class="control mx-6 column">
             <label for="thoughts" class="">Share additional thoughts with us</label>
-            <input id="thoughts" class="input is-rounded" type="text" placeholder="" required>
+            <textarea id="thoughts" class="textarea is-rounded" type="text" placeholder="" required></textarea>
           </div>
 
           <div class="field container my-5 mx-3 control is-fullwidth columns">
@@ -227,10 +247,7 @@
 </div>
  
 <!--Footer-->
-<footer class="footer" id="footer">
-  <!-- This script adds the site footer to the page -->
-  <script src="scripts/addFooter.js" defer></script>
-</footer>
+
 </body>
 
 </html>
