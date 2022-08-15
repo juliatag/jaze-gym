@@ -53,9 +53,9 @@ function submit(e) {
 
   if (validate($email) && validate($freq)) {
     const $name = document.querySelector('input.name');
-    const name = (($name.value) ? $name.value : 'Anonymous') + ' - JAZE Feedback';
+    const name = (($name.value) ? $name.value : 'Anonymous');
     const email = ($email.value) ? $email.value : '';
-    const freq = $freq.value;
+    const freq = $freq.value + ' times per ' + document.getElementById('per').value;
     const rating = document.getElementById('rating').value;
     const msg = document.getElementById('msg').value;
 
@@ -67,6 +67,7 @@ function submit(e) {
       rating: rating,
       msg: msg
     };
+    console.log(templateParams);
     emailjs.send('service_8zps2hk', 'template_h17i7dh', templateParams)
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
