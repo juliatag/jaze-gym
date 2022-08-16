@@ -110,6 +110,10 @@ footer {
   box-shadow: -4px 6px 7px rgba(0, 0, 0, 0.5);
 }
 
+.error {
+  border: 2px solid red !important;
+}
+
 @media print {
   * {
     background-color: white;

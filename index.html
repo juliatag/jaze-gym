@@ -23,42 +23,10 @@
 
 <body>
   <!-- Header with Navigation -->
-  <header id="header">
-    <nav class="navbar container has-shadow is-white mb-5">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="./">
-          <img src="images/jaze-logo.png"
-            alt="Company logo, a blue outline of a women with a dumb bell and the word jaze" style="max-height:70px"
-            class="px-2 py-2">
-        </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navigation">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="navbar-menu" id="navigation">
-        <div class="navbar-end">
-          <a href="plans.html" class="navbar-item">Plans</a>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">Gym</a>
-            <div class="navbar-dropdown">
-              <a href="equipment.html" class="navbar-item">Equipment</a>
-              <a href="amenities.html" class="navbar-item">Amenities</a>
-              <a href="classes.html" class="navbar-item">Classes</a>
-              <a href="trainers.html" class="navbar-item">Personal Trainers</a>
-            </div>
-          </div>
-          <a href="childcare.html" class="navbar-item">Child Care</a>
-          <a href="about.html" class="navbar-item">About</a>
-          <a href="plans.html" class="navbar-item">
-            <button class="button is-primary is-rounded has-text-weight-bold">Sign Up</button>
-          </a>
-          <a href="fr/index.html" class="navbar-item">FR</a>
-        </div>
-      </div>
-    </nav>
+  <header id="header">
+    <!-- This script adds the site header to the page -->
+    <script src="scripts/addHeader.js" defer></script>
   </header>
 
   <!-- Intro Section -->
@@ -74,7 +42,7 @@
             Women Owned, run, and staffed, our woman only gym is a safe space for you to pursue your personal growth and
             physical wellbeing goals. Workout, swim and enjoy the sauna. Take time for yourself!
           </p>
-          <a href="plans.html"><button class="button is-rounded is-primary">Plans</button></a>
+          <a href="plans.html" class="button is-rounded is-primary">Plans</a>
         </div>
       </div>
       <div class="column">
@@ -102,7 +70,7 @@
             your children be another excuse to stay away from the gym! They will love our playroom and animators and you
             will get a break. This gym was created to create space for you to work on you. Let us help!
           </p>
-          <a href="childcare.html"> <button class="button is-rounded is-primary">Childcare</button></a>
+          <a href="childcare.html" class="button is-rounded is-primary">Childcare</a>
         </div>
       </div>
       <div class="column">
@@ -128,8 +96,8 @@
             From Leg day to upper body day, from cardio to yoga, we have all the equipment you need to succeed! Keeping
             the equipment running right is a great pride of ours. We make sure there is enough for everyone.
           </p>
-          <a href="equipment.html">
-            <button class="button is-rounded is-primary">Equipment</button>
+          <a href="equipment.html" class="button is-rounded is-primary">
+            Equipment
           </a>
         </div>
       </div>
@@ -158,8 +126,8 @@
             can feel lonely sometimes and accountability through relationships can really bring your routine to the next
             level. There are even some classes for you and your little ones!
           </p>
-          <a href="classes.html">
-            <button class="button is-rounded is-primary">Classes</button>
+          <a href="classes.html" class="button is-rounded is-primary">
+            Classes
           </a>
         </div>
       </div>
@@ -187,8 +155,8 @@
             for fitness and will personalize your routine based on your physical needs. Don’t be shy, let us show you
             how its done!
           </p>
-          <a href="trainers.html">
-            <button class="button is-rounded is-rounded is-rounded is-primary">Trainers</button>
+          <a href="trainers.html" class="button is-rounded is-rounded is-rounded is-primary">
+            Trainers
           </a>
         </div>
       </div>
@@ -216,8 +184,8 @@
             Equipment, trainers, childcare, swimming pool, lockers, showers, and sauna. All clean and all well designed
             you will feel comfortable and at home every time you come in.
           </p>
-          <a href="amenities.html">
-            <button class="button is-rounded is-primary">Amenities</button>
+          <a href="amenities.html" class="button is-rounded is-primary">
+            Amenities
           </a>
         </div>
       </div>
@@ -241,15 +209,18 @@
             Convenient underground parking!
           </h2>
           <p class="mb-4 is-size-6">
-            Our location at 123 Monkland is right near the Villa Maria metro station for those using transit and has free
+            Our location at 123 Monkland is right near the Villa Maria metro station for those using transit and has
+            free
             underground parking for those driving cars.
           </p>
-         
+
         </div>
       </div>
       <div class="column">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1867.2068034984354!2d-73.6228687267589!3d45.47687154015964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2f41368c5d0992fe!2zNDXCsDI4JzM1LjUiTiA3M8KwMzcnMTkuOSJX!5e0!3m2!1sen!2sus!4v1657909241436!5m2!1sen!2sus" width="600" height="450" style="border:0;width: 100%;height: 350px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1867.2068034984354!2d-73.6228687267589!3d45.47687154015964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2f41368c5d0992fe!2zNDXCsDI4JzM1LjUiTiA3M8KwMzcnMTkuOSJX!5e0!3m2!1sen!2sus!4v1657909241436!5m2!1sen!2sus"
+          width="600" height="450" style="border:0;width: 100%;height: 350px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -257,7 +228,7 @@
   <!-- SIgn Up Buttom-->
   <section id="home-sign-up" class="container my-5 p-5 hide-print">
     <div class="container is-max-desktop has-text-centered">
-      <h2 class="title mb-2 is-centered">Like our women only gym?</h2>
+      <h2 class="title mb-2 is-centered">Like our Women only gym?</h2>
       <p class="mb-6 is-size-6 px-6-tablet mx-6-tablet">
         Come train at a save space that is tailored to you!
       </p>
@@ -270,28 +241,10 @@
   </section>
 
   <!--Footer-->
-  <footer class="footer">
-    <div class="content has-text-centered has-text-white">
-      <p class="is-size-7">
-        JAZE Gym &copy; 2022
-      </p>
-      <p class="is-size-7 ">
-        123 Monkland Ave, Montreal, QC H4A 3T7 Canada
-      </p>
-      <div class="is-size-4 has-text-primary">
-        <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-
-      </div>
-    </div>
+  <footer class="footer" id="footer">
+    <!-- This script adds the site footer to the page -->
+    <script src="scripts/addFooter.js" defer></script>
   </footer>
-
-
-
-
-
-  <script src="scripts/mobile-menu.js"></script>
 </body>
 
 </html>

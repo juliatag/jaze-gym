@@ -1,0 +1,107 @@
+<div class="content has-text-centered has-text-white">
+  <p class="is-size-7">
+    JAZE Gym &copy; 2022
+  </p>
+  <p class="is-size-7 ">
+    123 Monkland Ave, Montreal, QC H4A 3T7 Canada
+  </p>
+  <div class="is-size-4">
+    <a href="https://twitter.com/jazegym" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+    <a href="https://instagram.com/jazegym" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
+    <a href="https://facebook.com/jazegym" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+
+  </div>
+  <p class="is-size-7">We appreciate your Feedback!</p>
+  <div class="buttons is-centered mt-4 ">
+    <a class="button is-rounded is-primary is-link is-small" id="feedbackBtn">
+      Feedback
+    </a>
+  </div>
+</div>
+
+<!-- Modal Feedback Form-->
+
+<div class="modal has-text-dark" id="modal">
+  <div class="modal-background hides-modal"></div>
+  <form autocomplete="on" id="feedback-form" class="modal-card">
+    <!-- Form Header -->
+    <header class="modal-card-head">
+      <p class="modal-card-title">Help us improve our Services</p>
+    </header>
+    <section class="modal-card-body">
+
+      <!-- Name Start -->
+      <div class="field mb-5">
+        <label class="label" for="name">Your Name</label>
+        <div class="control has-icons-left">
+          <input class="input is-success name" type="text" placeholder="Your Name">
+          <div class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email Start -->
+      <div class="field mb-5">
+        <label class="label">Email</label>
+        <div class="control has-icons-left">
+          <input class="input is-success email" type="email" placeholder="Your Email">
+          <div class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </div>
+        </div>
+        <p class="help email is-danger is-hidden has-text-weight-semibold">Please enter a valid email (not required)</p>
+      </div>
+
+      <!-- Gym Frequency -->
+      <div class="field mb-5">
+        <label class="label" for="frequency">How often do you visit our gym?</label>
+        <div class="field has-addons ">
+          <div class="control has-icons-left is-expanded">
+            <input id="frequency" class="input" type="number" placeholder="0" min="0"
+              oninput="this.value = Math.abs(this.value)" required>
+            <div class="icon is-small is-left">
+              <i class="fas fa-calendar"></i>
+            </div>
+          </div>
+          <p class="control">
+            <span class="select">
+              <select id="per">
+                <option value="week">per week</option>
+                <option value="month">per month</option>
+                <option value="year">per year</option>
+              </select>
+            </span>
+          </p>
+        </div>
+        <p class="help frequency is-danger is-hidden has-text-weight-semibold">Please enter a positive number</p>
+      </div>
+
+      <!-- Satisfaction -->
+      <div class="field mb-5">
+        <label class="label">Rate your overall satisfaction</label>
+        <div class="control is-flex">
+          <i class="fas fa-face-frown has-text-danger is-size-3"></i>
+          <input type="range" min="1" max="5" step="1" id="rating" name="rating" value="5"
+            class="mx-3 is-flex-grow-1 is-flex-shrink-1">
+          <i class="fas fa-face-smile has-text-success is-size-3"></i>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="field mb-5">
+        <label class="label" for="thoughts">Any feedback about our services or website?</label>
+        <div class="control">
+          <textarea id="msg" class="textarea is-rounded" type="text" placeholder=""></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Footer -->
+    <footer class="modal-card-foot">
+      <a id="submitBtn" value="Calculate" class="button is-primary">Send</a>
+      <a class="button is-danger hides-modal">Cancel</a>
+    </footer>
+
+  </form>
+</div>
