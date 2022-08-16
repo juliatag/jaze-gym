@@ -1,4 +1,3 @@
-//ts-check
 // Declare settings for the request
 const SETTINGS = {
     async: true,
@@ -19,7 +18,7 @@ document.addEventListener('input', (event) => {
     // Find all the inputs with the same name and assign them the same value
     if (target.matches('.input.' + target.name)) {
         changeAllInputs(target);
-        validateInput(target);
+        validate(target);
     }
     // Hide result boxes - Decided to remove this
     // $('.result').addClass('is-hidden');
@@ -40,8 +39,7 @@ function calculateBMI(event) {
     // Validate and assign values
     try {
         document.querySelectorAll('#form-bmi input').forEach(input => {
-            validateInput(input)
-            if (!validateInput(input))
+            if (!validate(input))
                 throw `${input.name} field's value is not valid!`;
             else if (input.name === 'age')
                 age = input.value;
@@ -66,7 +64,7 @@ function calculateBMI(event) {
             $("#form-bmi .bmi span").text(response.data.bmi);
             $("#form-bmi .health span").text(response.data.health);
             $('#form-bmi .result')
-                .removeClass('is-hidden has-background-info has-background-success has-background-warning has-background-danger')
+                .removeClass('is-hidden')
                 .addClass(() => {
                     let bmi = response.data.bmi;
                     if (bmi < 18.5)
@@ -97,7 +95,7 @@ function calculateIdealWeight(event) {
         let genderInput = document.querySelector('#form-idealweight select.gender');
         gender = genderInput.value;
         let heightInput = document.querySelector('#form-idealweight input.height');
-        if (!validateInput(heightInput))
+        if (!validate(heightInput))
             throw `${heightInput.name} field's value is not valid!`;
         else
             height = heightInput.value;
@@ -128,6 +126,7 @@ function calculateIdealWeight(event) {
  * Validates the CalorieRequirement inputs. Consumes API. Displays result
  * @param {Event} event 
  */
+
 function calculateCalorieReq(event) {
     // declare variables used by the API
     let activityLevel, age, gender, height, weight;
@@ -139,7 +138,7 @@ function calculateCalorieReq(event) {
         let genderInput = document.querySelector('#form-dailyrequirements select.gender');
         gender = genderInput.value;
         document.querySelectorAll('#form-dailyrequirements input').forEach(input => {
-            if (!validateInput(input))
+            if (!validate(input))
                 throw `${input.name} field's value is not valid!`;
             else if (input.name === 'age')
                 age = input.value;
@@ -164,13 +163,13 @@ function calculateCalorieReq(event) {
         .done(function (response) {
             $("#form-dailyrequirements .bmr span").text(Math.round(response.data.BMR));
             $("#form-dailyrequirements .maintain-weight span").text(Math.round(response.data.goals['maintain weight']));
-            // $("#form-dailyrequirements .mild-weight-loss span").text(Math.round(response.data.goals['Mild weight loss']['calory']));
-            // $("#form-dailyrequirements .kg-mild-loss span").text(response.data.goals['Mild weight loss']['loss weight']);;
+            $("#form-dailyrequirements .mild-weight-loss span").text(Math.round(response.data.goals['Mild weight loss']['calory']));
+            $("#form-dailyrequirements .kg-mild-loss span").text(response.data.goals['Mild weight loss']['loss weight']);;
             $("#form-dailyrequirements .weight-loss span").text(Math.round(response.data.goals['Weight loss']['calory']));
-            // $("#form-dailyrequirements .extreme-weight-loss span").text(Math.round(response.data.goals['Extreme weight loss']['calory']));
-            // $("#form-dailyrequirements .mild-weight-gain span").text(Math.round(response.data.goals['Mild weight gain']['calory']));
+            $("#form-dailyrequirements .extreme-weight-loss span").text(Math.round(response.data.goals['Extreme weight loss']['calory']));
+            $("#form-dailyrequirements .mild-weight-gain span").text(Math.round(response.data.goals['Mild weight gain']['calory']));
             $("#form-dailyrequirements .weight-gain span").text(Math.round(response.data.goals['Weight gain']['calory']));
-            // $("#form-dailyrequirements .extreme-weight-gain span").text(Math.round(response.data.goals['Extreme weight gain']['calory']));
+            $("#form-dailyrequirements .extreme-weight-gain span").text(Math.round(response.data.goals['Extreme weight gain']['calory']));
             $('#form-dailyrequirements .result').removeClass('is-hidden');
         })
         // Fail
@@ -216,7 +215,7 @@ function changeAllInputs(target) {
  * @param {EventTarget} target 
  * @returns {Boolean}
  */
-function validateInput(target) {
+function validate(target) {
     // Get from the input: min, max, and required
     const min = parseInt(target.min);
     const max = parseInt(target.max);
