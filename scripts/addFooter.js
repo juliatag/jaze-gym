@@ -82,7 +82,7 @@ function submit(e) {
         //console.log('SUCCESS!', response.status, response.text);
       }, function (error) {
         //Failed
-        $thanksMessage.innerText = 'Error! Emial not sent.';
+        $thanksMessage.innerText = 'Error! Email not sent.';
         $thanksMessage.classList.add('has-text-danger');
         //console.log('FAILED...', error);
       });

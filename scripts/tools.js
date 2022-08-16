@@ -1,3 +1,4 @@
+//ts-check
 // Declare settings for the request
 const SETTINGS = {
     async: true,
@@ -18,7 +19,7 @@ document.addEventListener('input', (event) => {
     // Find all the inputs with the same name and assign them the same value
     if (target.matches('.input.' + target.name)) {
         changeAllInputs(target);
-        validate(target);
+        validateInput(target);
     }
     // Hide result boxes - Decided to remove this
     // $('.result').addClass('is-hidden');
@@ -39,7 +40,8 @@ function calculateBMI(event) {
     // Validate and assign values
     try {
         document.querySelectorAll('#form-bmi input').forEach(input => {
-            if (!validate(input))
+            validateInput(input)
+            if (!validateInput(input))
                 throw `${input.name} field's value is not valid!`;
             else if (input.name === 'age')
                 age = input.value;
@@ -95,7 +97,7 @@ function calculateIdealWeight(event) {
         let genderInput = document.querySelector('#form-idealweight select.gender');
         gender = genderInput.value;
         let heightInput = document.querySelector('#form-idealweight input.height');
-        if (!validate(heightInput))
+        if (!validateInput(heightInput))
             throw `${heightInput.name} field's value is not valid!`;
         else
             height = heightInput.value;
@@ -126,7 +128,6 @@ function calculateIdealWeight(event) {
  * Validates the CalorieRequirement inputs. Consumes API. Displays result
  * @param {Event} event 
  */
-
 function calculateCalorieReq(event) {
     // declare variables used by the API
     let activityLevel, age, gender, height, weight;
@@ -138,7 +139,7 @@ function calculateCalorieReq(event) {
         let genderInput = document.querySelector('#form-dailyrequirements select.gender');
         gender = genderInput.value;
         document.querySelectorAll('#form-dailyrequirements input').forEach(input => {
-            if (!validate(input))
+            if (!validateInput(input))
                 throw `${input.name} field's value is not valid!`;
             else if (input.name === 'age')
                 age = input.value;
@@ -215,7 +216,7 @@ function changeAllInputs(target) {
  * @param {EventTarget} target 
  * @returns {Boolean}
  */
-function validate(target) {
+function validateInput(target) {
     // Get from the input: min, max, and required
     const min = parseInt(target.min);
     const max = parseInt(target.max);
