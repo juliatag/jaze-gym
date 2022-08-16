@@ -56,25 +56,27 @@
               <div class="field">
                 <!-- Age Start -->
                 <div class="field">
-                  <label class="label" for="age"><strong>Age</strong></label>
+                  <label class="label"><strong>Age</strong></label>
                   <div class="control">
-                    <input class="input age is-info" name="age" type="number" placeholder="25" size="10" min="1"
-                      max="80" required>
+                    <input class="input age is-info" name="age" type="number" placeholder="25" min="1" max="80"
+                      required>
                   </div>
-                  <p class="help is-danger age is-hidden has-text-weight-semibold">You must enter a value between 1 and 80.</p>
+                  <p class="help is-danger age is-hidden has-text-weight-semibold">You must enter a value between 1 and
+                    80.</p>
                 </div>
                 <!-- Age End -->
                 <!-- Weight Start -->
                 <div class="field">
                   <label class="label"><strong>Weight (kg)</strong></label>
                   <div class="control has-icons-left">
-                    <input class="input weight is-info" name="weight" type="number" placeholder="75" size="10" min="40"
-                      max="160" required>
+                    <input class="input weight is-info" name="weight" type="number" placeholder="75" min="40" max="160"
+                      required>
                     <span class="icon is-small is-left">
                       <i class="fa-solid fa-weight-scale"></i>
                     </span>
                   </div>
-                  <p class="help is-danger weight is-hidden has-text-weight-semibold">Please enter a value between 40 and 160.</p>
+                  <p class="help is-danger weight is-hidden has-text-weight-semibold">Please enter a value between 40
+                    and 160.</p>
                 </div>
                 <!-- Weight End -->
                 <!-- Height Start -->
@@ -82,17 +84,18 @@
                   <label class="label"><strong>Height (cm)</strong></label>
                   <div class="control has-icons-left">
                     <input class="input height is-info needs-validation" name="height" type="number" placeholder="170"
-                      size="10" min="130" max="230" required>
+                      min="130" max="230" required>
                     <span class="icon is-small is-left">
                       <i class="fa-solid fa-ruler-vertical"></i>
                     </span>
                   </div>
-                  <p class="help is-danger height is-hidden has-text-weight-semibold">Please enter a value between 130 and 230.</p>
+                  <p class="help is-danger height is-hidden has-text-weight-semibold">Please enter a value between 130
+                    and 230.</p>
                 </div>
                 <!-- Height End -->
               </div>
               <div class="field">
-                <a id="submit-bmi" value="Calculate" class="button is-primary is-fullwidth">Calculate</a>
+                <a id="submit-bmi" class="button is-primary is-fullwidth">Calculate</a>
               </div>
               <!-- calculator response -->
               <div class="result is-hidden is-size-5 has-text-centered">
@@ -122,6 +125,7 @@
                 <div class="control has-icons-left">
                   <div class="select is-fullwidth">
                     <select class="gender" name="gender" required>
+                      <option value="" class="has-background-link-light is-hidden" disabled>Your Gender</option>
                       <option value="male">Male</option>
                       <option value="female" selected>Female</option>
                     </select>
@@ -136,17 +140,18 @@
                   <label class="label"><strong>Height (cm)</strong></label>
                   <div class="control has-icons-left">
                     <input class="input height is-info needs-validation" name="height" type="number" placeholder="170"
-                      size="10" min="130" max="230" required>
+                      min="130" max="230" required>
                     <span class="icon is-small is-left">
                       <i class="fa-solid fa-ruler-vertical"></i>
                     </span>
                   </div>
-                  <p class="help is-danger height is-hidden has-text-weight-semibold">Please enter a value between 130 and 230.</p>
+                  <p class="help is-danger height is-hidden has-text-weight-semibold">Please enter a value between 130
+                    and 230.</p>
                 </div>
                 <!-- Height End -->
               </div>
               <div class="field">
-                <a id="submit-idealweight" value="Calculate" class="button is-primary is-fullwidth">Calculate</a>
+                <a id="submit-idealweight" class="button is-primary is-fullwidth">Calculate</a>
               </div>
               <!-- calculator response -->
               <div class="result is-hidden has-background-success is-size-5 has-text-centered">
@@ -159,149 +164,152 @@
           </div>
         </article>
       </div>
-      </div>
-      <!-- Ideal Weight End -->
+    </div>
+    <!-- Ideal Weight End -->
 
-      <!-- Daily Calorie Requirements Start -->
-      <div class="columns px-6 pb-6 is-desktop">
-        <div class="column px-6">
-          <article class="round message is-primary" style="max-width: 450px;">
-            <div class="message-header has-text-centered">
-              <h3 class="container is-size-4">Daily Calorie Requirements</h3>
-            </div>
-            <div class=" box message-body is-size-7 p-5 has-text-dark">
-              <!-- calculator Form -->
-              <form id="form-dailyrequirements">
+    <!-- Daily Calorie Requirements Start -->
+    <div class="columns px-6 pb-6 is-desktop">
+      <div class="column px-6">
+        <article class="round message is-primary" style="max-width: 450px;">
+          <div class="message-header has-text-centered">
+            <h3 class="container is-size-4">Daily Calorie Requirements</h3>
+          </div>
+          <div class=" box message-body is-size-7 p-5 has-text-dark">
+            <!-- calculator Form -->
+            <form id="form-dailyrequirements">
+              <div class="field">
+                <!-- Activity Level Start -->
+                <label class="label"><strong>Activity Level</strong></label>
+                <div class="control has-icons-left">
+                  <div class="select is-fullwidth">
+                    <select class="activityid" name="activityid" required>
+                      <option value="" class="has-background-link-light is-hidden" disabled>&nbsp;</option>
+                      <option value="level_1" selected>Little or no exercise </option>
+                      <option value="level_2">Exercise 1-3 times a week</option>
+                      <option value="level_3">Exercise 4-5 times a week</option>
+                      <option value="level_4">Daily or intense exercise 3-4 times a week</option>
+                      <option value="level_5">Intense exercise 6-7 times a week</option>
+                      <option value="level_6">Very intense exercise daily, or physical job</option>
+                    </select>
+                  </div>
+                  <div class="icon is-small is-left">
+                    <i class="fa-solid fa-person-walking"></i>
+                  </div>
+                </div>
+                <!-- Activity Level End -->
+                <!-- Age Start -->
                 <div class="field">
-                  <!-- Activity Level Start -->
-                  <label class="label"><strong>Activity Level</strong></label>
-                  <div class="control has-icons-left">
-                    <div class="select is-fullwidth">
-                      <select class="activityid" name="activityid" required>
-                        <option value="level_1" selected>Little or no exercise </option>
-                        <option value="level_2">Exercise 1-3 times a week</option>
-                        <option value="level_3">Exercise 4-5 times a week</option>
-                        <option value="level_4">Daily or intense exercise 3-4 times a week</option>
-                        <option value="level_5">Intense exercise 6-7 times a week</option>
-                        <option value="level_5">Very intense exercise daily, or physical job</option>
-                      </select>
-                    </div>
-                    <div class="icon is-small is-left">
-                      <i class="fa-solid fa-person-walking"></i>
-                    </div>
+                  <label class="label"><strong>Age</strong></label>
+                  <div class="control">
+                    <input class="input age is-info" name="age" type="number" placeholder="25" min="1" max="80"
+                      required>
                   </div>
-                  <!-- Activity Level End -->
-                  <!-- Age Start -->
-                  <div class="field">
-                    <label class="label" for="age"><strong>Age</strong></label>
-                    <div class="control">
-                      <input class="input age is-info" name="age" type="number" placeholder="25" size="10" min="1"
-                        max="80" required>
-                    </div>
-                    <p class="help is-danger age is-hidden has-text-weight-semibold">You must enter a value between 1 and 80.</p>
-                  </div>
-                  <!-- Age End -->
+                  <p class="help is-danger age is-hidden has-text-weight-semibold">You must enter a value between 1 and
+                    80.</p>
+                </div>
+                <!-- Age End -->
 
-                  <!-- Gender Start -->
-                  <label class="label"><strong>Genger</strong></label>
-                  <div class="control has-icons-left">
-                    <div class="select is-fullwidth">
-                      <select class="gender" name="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female" selected>Female</option>
-                      </select>
-                    </div>
-                    <div class="icon is-small is-left">
-                      <i class="fas fa-user"></i>
-                    </div>
+                <!-- Gender Start -->
+                <label class="label"><strong>Genger</strong></label>
+                <div class="control has-icons-left">
+                  <div class="select is-fullwidth">
+                    <select class="gender" name="gender" required>
+                      <option value="" class="has-background-link-light is-hidden" disabled>&nbsp;</option>
+                      <option value="male">Male</option>
+                      <option value="female" selected>Female</option>
+                    </select>
                   </div>
-                  <!-- Gender End -->
-                  <!-- Height Start -->
-                  <div class="field">
-                    <label class="label"><strong>Height (cm)</strong></label>
-                    <div class="control has-icons-left">
-                      <input class="input height is-info needs-validation" name="height" type="number" placeholder="170"
-                        size="10" min="130" max="230" required>
-                      <span class="icon is-small is-left">
-                        <i class="fa-solid fa-ruler-vertical"></i>
-                      </span>
-                    </div>
-                    <p class="help is-danger height is-hidden">Please enter a value between 130 and 230.</p>
+                  <div class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
                   </div>
-                  <!-- Height End -->
-                  <!-- Weight Start -->
-                  <div class="field">
-                    <label class="label"><strong>Weight (kg)</strong></label>
-                    <div class="control has-icons-left">
-                      <input class="input weight is-info" name="weight" type="number" placeholder="75" size="10"
-                        min="40" max="160" required>
-                      <span class="icon is-small is-left">
-                        <i class="fa-solid fa-weight-scale"></i>
-                      </span>
-                    </div>
-                    <p class="help is-danger weight is-hidden">Please enter a value between 40 and 160.</p>
-                  </div>
-                  <!-- Weight End -->
                 </div>
+                <!-- Gender End -->
+                <!-- Height Start -->
                 <div class="field">
-                  <a id="submit-dailycaloriereq" value="Calculate" class="button is-primary is-fullwidth">Calculate</a>
+                  <label class="label"><strong>Height (cm)</strong></label>
+                  <div class="control has-icons-left">
+                    <input class="input height is-info needs-validation" name="height" type="number" placeholder="170"
+                      min="130" max="230" required>
+                    <span class="icon is-small is-left">
+                      <i class="fa-solid fa-ruler-vertical"></i>
+                    </span>
+                  </div>
+                  <p class="help is-danger height is-hidden">Please enter a value between 130 and 230.</p>
                 </div>
-                <!-- calculator response -->
-                <div class="result is-hidden is-size-5 has-text-centered">
-                  <p class="bmr"><b>Daily Calories to Stay Alive :</b> <span></span></p>
-                  <p class="maintain-weight"><b>Calories to Maintain Weight : </b> <span></span></p>
-                  <!-- Do you think this is necessary?
+                <!-- Height End -->
+                <!-- Weight Start -->
+                <div class="field">
+                  <label class="label"><strong>Weight (kg)</strong></label>
+                  <div class="control has-icons-left">
+                    <input class="input weight is-info" name="weight" type="number" placeholder="75" min="40" max="160"
+                      required>
+                    <span class="icon is-small is-left">
+                      <i class="fa-solid fa-weight-scale"></i>
+                    </span>
+                  </div>
+                  <p class="help is-danger weight is-hidden">Please enter a value between 40 and 160.</p>
+                </div>
+                <!-- Weight End -->
+              </div>
+              <div class="field">
+                <a id="submit-dailycaloriereq" class="button is-primary is-fullwidth">Calculate</a>
+              </div>
+              <!-- calculator response -->
+              <div class="result is-hidden is-size-5 has-text-centered has-background-success">
+                <p class="bmr"><b>Daily Calories to Stay Alive :</b> <span></span></p>
+                <p class="maintain-weight"><b>Calories to Maintain Weight : </b> <span></span></p>
+                <!-- Do you think this is necessary?
                   <p class="kg-mild-loss"><b>Weekly Mild Weight Loss Means :</b> <span></span></p> -->
-                  <!-- <p class="mild-weight-loss"><b>Calories to Lose Weight Slowly :</b> <span></span></p> -->
-                  <p class="weight-loss"><b>Calories to Lose Weight Steadily :</b> <span></span></p>
-                  <!-- <p class="extreme-weight-loss"><b>Calories To Lose Weight Quickly :</b> <span></span></p>
+                <!-- <p class="mild-weight-loss"><b>Calories to Lose Weight Slowly :</b> <span></span></p> -->
+                <p class="weight-loss"><b>Calories to Lose Weight Steadily :</b> <span></span></p>
+                <!-- <p class="extreme-weight-loss"><b>Calories To Lose Weight Quickly :</b> <span></span></p>
                   <p class="mild-weight-gain"><b>Calories to Gain Weight Slowly :</b> <span></span></p> -->
-                  <p class="weight-gain"><b>Calories to Gain Weight Steadily :</b> <span></span></p>
-                  <!-- <p class="extreme-weight-gain"><b>Calories to Gain Weight Quickly :</b> <span></span></p> -->
-                </div>
-              </form>
-            </div>
-          </article>
-        </div>
-        <!-- Calorie Requirements End -->
+                <p class="weight-gain"><b>Calories to Gain Weight Steadily :</b> <span></span></p>
+                <!-- <p class="extreme-weight-gain"><b>Calories to Gain Weight Quickly :</b> <span></span></p> -->
+              </div>
+            </form>
+          </div>
+        </article>
+      </div>
+      <!-- Calorie Requirements End -->
 
 
 
+    </div>
+  </div>
+  <!-- Tools End -->
+
+  <!-- Outro Start -->
+  <section id="plans-signup" class="container my-5 px-4 hide-print">
+    <div class="columns">
+      <div class="column">
+        <figure class="image is-5by3">
+          <img src="images/trainer.jpg" class="img-cover" alt="Trainer">
+        </figure>
+      </div>
+      <div class="column  p-6">
+        <div class="container has-text-centered-mobile">
+          <h2 class="title mb-2">
+            Your goals are our priority
+          </h2>
+          <p class="mb-4 is-size-6">
+            <!-- We are committed to assisting you with any and all weight management targets.  -->
+            Our personal trainers can customize a plan with you according to your health, level of physical fitness, and
+            body type. Get started today!
+          </p>
+          <a href="trainers.html" class="button is-rounded is-primary"> Learn More</a>
         </div>
       </div>
     </div>
-    <!-- Tools End -->
+  </section>
+  <!-- Outro End -->
 
-    <!-- Outro Start -->
-    <section id="plans-signup" class="container my-5 px-4 hide-print">
-      <div class="columns">
-        <div class="column">
-          <figure class="image is-5by3">
-            <img src="images/trainer.jpg" class="img-cover ">
-          </figure>
-        </div>
-        <div class="column  p-6">
-          <div class="container has-text-centered-mobile">
-            <h2 class="title mb-2">
-              Your goals are our priority
-            </h2>
-            <p class="mb-4 is-size-6">
-              <!-- We are committed to assisting you with any and all weight management targets.  -->
-              Our personal trainers can customize a plan with you according to your health, level of physical fitness, and body type. Get started today!
-            </p>
-            <a href="plans.html"> <button class="button is-rounded is-primary">Sign Up</button></a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Outro End -->
-
-    <!-- Footer Start -->
-    <footer class="footer" id="footer">
-      <!-- This script adds the site footer to the page -->
-      <script src="scripts/addFooter.js" defer></script>
-    </footer>
-    <!-- Footer End -->
+  <!-- Footer Start -->
+  <footer class="footer" id="footer">
+    <!-- This script adds the site footer to the page -->
+    <script src="scripts/addFooter.js" defer></script>
+  </footer>
+  <!-- Footer End -->
 </body>
 
 </html>

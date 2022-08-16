@@ -45,6 +45,7 @@
 
   <!-- Plans Section -->
   <section id="plans-plans" class="container my-5 px-4">
+    <h2 class="is-hidden">&nbsp;</h2>
     <div class="columns px-6 pb-6">
       <div class="column  px-6">
         <article class="round message is-primary ">
@@ -63,9 +64,9 @@
               <li>acess to lockers (bring your own lock)</li>
               <li>acess to group classes</li>
               <li>one one-on-one session with a certified peronal trainer</li>
-              <br>
-              <br>
             </ul>
+            <br>
+            <br>
             <p class="is-size-6 has-text-centered mt-5"><strong> 60$/month</strong></p>
             <div class="buttons is-centered mt-5">
               <a class="button is-centered is-rounded is-primary btn-signup" id="btnStandard">
@@ -123,13 +124,13 @@
             After your first free training session talk to your trainer about scheduling additional ones. Prices may
             vary between 30$-40$ per session.
           </p>
-          <a href="trainers.html"> <button class="button is-rounded is-primary">Learn More</button></a>
+          <a href="trainers.html" class="button is-rounded is-primary"> Learn More</a>
         </div>
       </div>
       <div class="column">
 
         <figure class="image is-5by3">
-          <img src="images/trainer2.jpg" class="img-cover ">
+          <img src="images/trainer2.jpg" class="img-cover" alt="Trainer">
         </figure>
 
       </div>
@@ -149,122 +150,123 @@
     <div class="modal-background"></div>
     <div class="modal-content has-background-white py-5 px-6">
       <div class="container">
-      
-          <!-- Plan Select -->
-          <form autocomplete="on" id="signup-form">
-            <div class="field container my-5 mx-3 control select is-fullwidth">
-              <label for="selectplan" class="is-hidden">Select your Plan</label>
-              <select id="selectplan" class="has-background-primary has-text-white" required>
-                <option value="" selected disabled>Select your plan</option>
-                <option value="standard">Standard</option>
-                <option value="moms">Moms</option>
-              </select>
+
+        <!-- Plan Select -->
+        <form autocomplete="on" id="signup-form">
+          <div class="field container my-5 mx-3 control select is-fullwidth">
+            <label for="selectplan" class="is-hidden">Select your Plan</label>
+            <select id="selectplan" class="has-background-primary has-text-white" required>
+              <option value="" selected disabled>Select your plan</option>
+              <option value="standard">Standard</option>
+              <option value="moms">Moms</option>
+            </select>
+          </div>
+
+          <div class="field container columns my-5 is-flex is-flex-direction-column columns">
+            <label class="label mx-6">Basic Information</label>
+            <div class="control mx-6 column">
+              <label for="fn" class="is-hidden">First Name</label>
+              <input id="fn" class="input is-rounded" type="text" placeholder="First Name" required>
+            </div>
+            <div class="control mx-6 column">
+              <label for="ln" class="is-hidden">Last Name</label>
+              <input class="input is-rounded" id="ln" type="text" placeholder="Last Name" required>
             </div>
 
-            <div class="field container columns my-5 is-flex is-flex-direction-column columns">
-              <label class="label mx-6">Basic Information</label>
-              <div class="control mx-6 column">
-                <label for="fn" class="is-hidden">First Name</label>
-                <input id="fn" class="input is-rounded" type="text" placeholder="First Name" required>
-              </div>
-              <div class="control mx-6 column">
-                <label for="ln" class="is-hidden">Last Name</label>
-                <input class="input is-rounded" id="ln" type="text" placeholder="Last Name" required>
-              </div>
 
+            <div class="field mt-1 mx-6 is-flex column">
+              <div class="control mr-2">
+                <label for="email" class="is-hidden">E-mail</label>
+                <input id="email" class="input is-rounded" type="email" placeholder="e-mail" required
+                  pattern="[\w\.\-]+@[\w]+\.[\w]{2,4}">
+              </div>
+              <div class="control ml-2">
+                <label for="email-confirm" class="is-hidden">Confirm E-mail</label>
+                <input id="email-confirm" class="input is-rounded" type="email" placeholder="confirm e-mail" required
+                  pattern="[\w\.\-]+@[\w]+\.[\w]{2,4}">
+              </div>
+            </div>
 
-              <div class="field mt-1 mx-6 is-flex column">
-                <div class="control mr-2">
-                  <label for="email" class="is-hidden">E-mail</label>
-                  <input id="email" class="input is-rounded" type="email" placeholder="e-mail" required
-                    pattern="[\w\.\-]+@[\w]+\.[\w]{2,4}">
+            <div class="field mx-6 is-flex column columns">
+              <div class="control mr-2 column p-0">
+                <label for="dob" class="">Date of Birth</label>
+                <input id="dob" class="input is-rounded is-fullwidth" type="date" min="1900-01-01" required>
+              </div>
+              <div class="control ml-2 column p-0">
+                <label for="gender" class="is-invisible">Gender</label>
+                <div class="select is-fullwidth">
+                  <select id="gender" name="gender" class="input is-rounded" required>
+                    <option value="" class="has-background-link-light is-hidden" disabled>Your Gender</option>
+                    <option value="female" selected>Female</option>
+                    <option value="male" disabled>Male</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Children Info -->
+            <div id="children-info" class="mb-4 mx-6 is-hidden">
+              <label class="label">Children Info</label>
+              <div class="field is-flex">
+                <div class="control">
+                  <button type="button" id="buttonPlus" class="button is-primary has-text-white is-size-7"><i
+                      class="fa-solid fa-plus"></i></button>
                 </div>
                 <div class="control ml-2">
-                  <label for="email-confirm" class="is-hidden">Confirm E-mail</label>
-                  <input id="email-confirm" class="input is-rounded" type="email" placeholder="confirm e-mail" required
-                    pattern="[\w\.\-]+@[\w]+\.[\w]{2,4}">
+                  <button type="button" id="buttonMinus" class="button is-primary has-text-white is-size-7"><i
+                      class="fa-solid fa-minus"></i></button>
                 </div>
               </div>
+              <table id="childrenTable" class="field" style="width: 100%;">
+                <tr>
+                  <td class="is-hidden">&nbsp;</td>
+                </tr>
+              </table>
+            </div>
 
-              <div class="field mx-6 is-flex column columns">
-                <div class="control mr-2 column p-0">
-                  <label for="dob" class="">Date of Birth</label>
-                  <input id="dob" class="input is-rounded is-fullwidth" type="date" min="1900-01-01" required>
-                </div>
-                <div class="control ml-2 column p-0">
-                  <label for="gender" class="is-invisible">Gender</label>
-                  <div class="select is-fullwidth">
-                    <select id="gender" name="gender" class="input is-rounded" required>
-                      <option value="female" selected>Female</option>
-                      <option value="male" disabled>Male</option>
-                    </select>
-                  </div>
-                </div>
+            <!-- Address Info -->
+            <label class="label mx-6">Address</label>
+            <div class="field mt-1 mx-6 is-flex columns column">
+              <div class="control mr-2 column p-0">
+                <label for="address" class="is-hidden">Address</label>
+                <input id="address" class="input is-rounded" type="text" placeholder="Address" required>
               </div>
-
-              <!-- Children Info -->
-              <div id="children-info" class="mb-4 mx-6 is-hidden">
-                <label class="label">Children Info</label>
-                <div class="field is-flex">
-                  <div class="control">
-                    <button type="button" id="buttonPlus" class="button is-primary has-text-white is-size-7"><i
-                        class="fa-solid fa-plus"></i></button>
-                  </div>
-                  <div class="control ml-2">
-                    <button type="button" id="buttonMinus" class="button is-primary has-text-white is-size-7"><i
-                        class="fa-solid fa-minus"></i></button>
-                  </div>
-                </div>
-                <table id="childrenTable" class="field" style="width: 100%;">
-                  <tr>
-                    <td class="is-hidden">&nbsp;</td>
-                  </tr>
-                </table>
-              </div>
-
-              <!-- Address Info -->
-              <label class="label mx-6">Address</label>
-              <div class="field mt-1 mx-6 is-flex columns column">
-                <div class="control mr-2 column p-0">
-                  <label for="address" class="is-hidden">Address</label>
-                  <input id="address" class="input is-rounded" type="text" placeholder="Address" required>
-                </div>
-                <div class="control ml-2 column p-0 is-3">
-                  <label for="apt" class="is-hidden">Apt #</label>
-                  <input id="apt" class="input is-rounded" type="text" placeholder="Apt #">
-                </div>
-              </div>
-
-              <div class="field mt-1 mx-6 is-flex columns column">
-                <div class="control column p-0 pr-3 is-5">
-                  <label for="city" class="is-hidden">Apt #</label>
-                  <input id="city" class="input is-rounded" type="text" placeholder="City" required>
-                </div>
-                <div class="control column p-0 is-4">
-                  <label for="postalcode" class="is-hidden">Postal Code</label>
-                  <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required
-                    maxlength="7"
-                    pattern="^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY][0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ] {0,1}[0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ][0-9]$">
-                </div>
-                <div class="control column p-0 pl-3 is-3">
-                  <label for="province" class="is-hidden">Province</label>
-                  <input id="province" class="input is-rounded" type="text" placeholder="Province Code" required
-                    maxlength="2" pattern="[A-Za-z][A-Za-z]">
-                </div>
-              </div>
-
-
-
-              <div class="field container my-5 mx-3 control is-fullwidth columns">
-                <div class="control ml-2 column p-0 is-8">
-                  <input type="submit" id="submit" value="Submit" class="button is-primary is-fullwidth" />
-                </div>
-                <div class="control ml-2 column p-0 is-4">
-                  <input type="reset" id="clear_form" value="Clear Your Form" class="button is-warning" />
-                </div>
+              <div class="control ml-2 column p-0 is-3">
+                <label for="apt" class="is-hidden">Apt #</label>
+                <input id="apt" class="input is-rounded" type="text" placeholder="Apt #">
               </div>
             </div>
-          </form>
+
+            <div class="field mt-1 mx-6 is-flex columns column">
+              <div class="control column p-0 pr-3 is-5">
+                <label for="city" class="is-hidden">Apt #</label>
+                <input id="city" class="input is-rounded" type="text" placeholder="City" required>
+              </div>
+              <div class="control column p-0 is-4">
+                <label for="postalcode" class="is-hidden">Postal Code</label>
+                <input id="postalcode" class="input is-rounded" type="text" placeholder="Postal Code" required
+                  maxlength="7"
+                  pattern="^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY][0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ] {0,1}[0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ][0-9]$">
+              </div>
+              <div class="control column p-0 pl-3 is-3">
+                <label for="province" class="is-hidden">Province</label>
+                <input id="province" class="input is-rounded" type="text" placeholder="Province Code" required
+                  maxlength="2" pattern="[A-Za-z][A-Za-z]">
+              </div>
+            </div>
+
+
+
+            <div class="field container my-5 mx-3 control is-fullwidth columns">
+              <div class="control ml-2 column p-0 is-8">
+                <input type="submit" id="submit" value="Submit" class="button is-primary is-fullwidth" />
+              </div>
+              <div class="control ml-2 column p-0 is-4">
+                <input type="reset" id="clear_form" value="Clear Your Form" class="button is-warning" />
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
