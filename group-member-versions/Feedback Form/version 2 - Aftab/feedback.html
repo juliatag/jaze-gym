@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="feedback.js"></script>
+</head>
+
+<body>
+    <button id="btn-feedback" class="btn-feedback button is-primary">Open</button>
+
+    <div class="modal">
+        <div class="modal-background hides-modal"></div>
+        <form class="modal-card" id="form-feedback">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Help us improve</p>
+                <button class="delete hides-modal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Name Start -->
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control has-icons-left">
+                        <input class="input name is-success" type="text" placeholder="Your Name">
+                        <div class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Name End -->
+                <!-- Email Start -->
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left">
+                        <input class="input is-success email" type="email" placeholder="Your Name">
+                        <div class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                    <p class="help email is-danger is-hidden has-text-weight-semibold">Please enter a valid email (not required)</p>
+                </div>
+                <!-- Email End -->
+                <!-- Msg Start -->
+                <div id="msg" class="field">
+                    <label class="label">Message*</label>
+                    <div class="control">
+                        <textarea class="textarea msg" type="text" placeholder="We appreciate your feedback!"
+                            minlength="20" required> </textarea>
+                    </div>
+                    <p class="help msg is-danger is-hidden has-text-weight-semibold">Please enter at least 20 characters</p>
+                </div>
+                <!-- Msg End -->
+            </section>
+            <footer class="modal-card-foot">
+                <a id="submit-feedback" value="Calculate" class="button is-primary">Send</a>
+                <a class="button is-danger hides-modal">Cancel</a>
+            </footer>
+        </form>
+    </div>
+</body>
+
+</html>
