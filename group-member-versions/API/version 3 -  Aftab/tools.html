@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Check out our various plans then sign up today and get a free personal training session!" />
+  <meta name="keywords" content=" gym, fitness, childcare, pool, sauna, steam sauna, women, equipment, workout, working
+    out, yoga, zumba, playroom, health, trainer, personal trainer, leg press, leg extension, leg curls, calf raise, hip
+    abductor, glute machine, chest press, butterfly, shoulder press, lateral raise, stair master, elliptical, treadmill,
+    zen yoga, crossfit, aerial yoga, body strong, sculp pro, dance, move it, show time, underground parking, 24/7 gym,
+    open late" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="../../../css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Jaze Gym - Tools</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="scripts/plans_validation.js" defer></script>
+  <script src="tools.js" defer></script>
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header id="header" class="gym tools">
+    <!-- This script adds the site header to the page -->
+    <script src="scripts/addHeader.js" defer></script>
+  </header>
+
+  <!-- Page Title -->
+  <div id="amenities-header" class="container my-5 p-5">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title mb-2 is-centered">Want to know your BMI?</h2>
+      <p class="is-size-6 px-6-tablet mx-6-tablet">
+        Use this calculator to check out your healt
+      </p>
+    </div>
+  </div>
+  <!-- Page Title End -->
+
+  <!-- Tools Start -->
+  <div id="tools" class="container my-5 px-4">
+    <div class="columns px-6 pb-6 is-desktop">
+      <!-- BMI Calculator Start -->
+      <div class="column px-6">
+        <article class="round message is-primary" style="max-width: 350px ;">
+          <div class="message-header has-text-centered">
+            <h3 class="container is-size-4">BMI Calculator</h3>
+          </div>
+          <div class=" box message-body is-size-7 p-5 has-text-dark">
+            <!-- calculator Form -->
+            <form id="form-bmi">
+              <div class="field">
+                <!-- Age Start -->
+                <div class="field">
+                  <label class="label" for="age"><strong>Age</strong></label>
+                  <div class="control">
+                    <input class="input age is-info" name="age" type="number" placeholder="25" size="10" min="1"
+                      max="80" required>
+                  </div>
+                  <p class="help is-danger age is-hidden has-text-weight-semibold">Age must be between 1 and 80.</p>
+                </div>
+                <!-- Age End -->
+                <!-- Weight Start -->
+                <div class="field">
+                  <label class="label"><strong>Weight (kg)</strong></label>
+                  <div class="control has-icons-left">
+                    <input class="input weight is-info" name="weight" type="number" placeholder="75" size="10" min="40"
+                      max="160" required>
+                    <span class="icon is-small is-left">
+                      <i class="fa-solid fa-weight-scale"></i>
+                    </span>
+                  </div>
+                  <p class="help is-danger weight is-hidden has-text-weight-semibold">Weight must be between 40 and 160.</p>
+                </div>
+                <!-- Weight End -->
+                <!-- Height Start -->
+                <div class="field">
+                  <label class="label"><strong>Height (cm)</strong></label>
+                  <div class="control has-icons-left">
+                    <input class="input height is-info needs-validation" name="height" type="number" placeholder="170"
+                      size="10" min="130" max="230" required>
+                    <span class="icon is-small is-left">
+                      <i class="fa-solid fa-ruler-vertical"></i>
+                    </span>
+                  </div>
+                  <p class="help is-danger height is-hidden has-text-weight-semibold">Height must be between 130 and 230.</p>
+                </div>
+                <!-- Height End -->
+              </div>
+              <div class="field">
+                <a id="submit-bmi" value="Calculate" class="button is-primary is-fullwidth">Calculate</a>
+              </div>
+              <!-- calculator response -->
+              <div class="result is-hidden is-size-5 has-text-centered">
+                <p class="bmi"><b>BMI :</b> <span></span></p>
+                <p class="health"><b>Health :</b> <span></span></p>
+              </div>
+            </form>
+          </div>
+        </article>
+      </div>
+      <!-- BMI Calculator End -->
+
+
+
+      <!-- Ideal Weight Start -->
+      <div class="column px-6">
+        <article class="round message is-primary" style="max-width: 350px ;">
+          <div class="message-header has-text-centered">
+            <h3 class="container is-size-4">Ideal Weight</h3>
+          </div>
+          <div class=" box message-body is-size-7 p-5 has-text-dark">
+            <!-- calculator Form -->
+            <form id="form-idealweight">
+              <div class="field">
+                <!-- Gender Start -->
+                <label class="label"><strong>Gender</strong></label>
+                <div class="control has-icons-left">
+                  <div class="select is-fullwidth">
+                    <select class="gender" name="gender" required>
+                      <option value="male">Male</option>
+                      <option value="female" selected>Female</option>
+                    </select>
+                  </div>
+                  <div class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>
+                <!-- Gender End -->
+                <!-- Height Start -->
+                <div class="field">
+                  <label class="label"><strong>Height (cm)</strong></label>
+                  <div class="control has-icons-left">
+                    <input class="input height is-info needs-validation" name="height" type="number" placeholder="170"
+                      size="10" min="130" max="230" required>
+                    <span class="icon is-small is-left">
+                      <i class="fa-solid fa-ruler-vertical"></i>
+                    </span>
+                  </div>
+                  <p class="help is-danger height is-hidden has-text-weight-semibold">Height must be between 130 and 230.</p>
+                </div>
+                <!-- Height End -->
+              </div>
+              <div class="field">
+                <a id="submit-idealweight" value="Calculate" class="button is-primary is-fullwidth">Calculate</a>
+              </div>
+              <!-- calculator response -->
+              <div class="result is-hidden has-background-success is-size-5 has-text-centered">
+                <p class="hamwi"><b>Hamwi :</b> <span></span></p>
+                <p class="devine"><b>Devine :</b> <span></span></p>
+                <p class="miller"><b>Miller :</b> <span></span></p>
+                <p class="robinson"><b>Robinson :</b> <span></span></p>
+              </div>
+            </form>
+          </div>
+        </article>
+      </div>
+      <!-- Ideal Weight End -->
+
+
+
+    </div>
+  </div>
+  <!-- Tools End -->
+
+  <!-- Outro Start -->
+  <section id="plans-signup" class="container my-5 px-4 hide-print">
+    <div class="columns">
+      <div class="column">
+        <figure class="image is-5by3">
+          <img src="images/trainer.jpg" class="img-cover ">
+        </figure>
+      </div>
+      <div class="column  p-6">
+        <div class="container has-text-centered-mobile">
+          <h2 class="title mb-2">
+            Cool Punchline..
+          </h2>
+          <p class="mb-4 is-size-6">
+            Add some motivational text here...
+          </p>
+          <a href="plans.html"> <button class="button is-rounded is-primary">Sign Up</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Outro End -->
+
+  <!-- Footer Start -->
+  <footer class="footer" id="footer">
+    <!-- This script adds the site footer to the page -->
+    <script src="scripts/addFooter.js" defer></script>
+  </footer>
+  <!-- Footer End -->
+</body>
+
+</html>
